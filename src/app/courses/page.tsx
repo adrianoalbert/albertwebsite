@@ -3,6 +3,16 @@ import { getContentByType } from '@/lib/markdown'
 import styles from '../styles/Card.module.css'
 import Image from 'next/image'
 
+// Helper function to format dates consistently
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+
 export default async function CoursesPage() {
   const courses = await getContentByType('courses')
 
@@ -46,7 +56,7 @@ export default async function CoursesPage() {
               <div className={styles.timelineDot}></div>
               <div className={styles.timelineContent}>
                 <div className={styles.timelineDate}>
-                  {new Date(course.date).toLocaleDateString()}
+                  {formatDate(course.date)}
                 </div>
                 <div className={styles.timelineCard}>
               <h2 className={styles.title}>{course.title}</h2>

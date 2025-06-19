@@ -2,6 +2,16 @@ import { getContentByType } from '@/lib/markdown'
 import styles from '../styles/Card.module.css'
 import Link from 'next/link'
 
+// Helper function to format dates consistently
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+
 export default async function CertificationsPage() {
   const certifications = await getContentByType('certifications')
 
@@ -91,9 +101,9 @@ export default async function CertificationsPage() {
                   <td>
                     {cert.issued && (
                       <div className={styles.dateInfo}>
-                        <div>Issued: {new Date(cert.issued).toLocaleDateString()}</div>
+                        <div>Issued: {formatDate(cert.issued)}</div>
                         {cert.expires && cert.expires !== 'Does not expire' && (
-                          <div>Expires: {new Date(cert.expires).toLocaleDateString()}</div>
+                          <div>Expires: {formatDate(cert.expires)}</div>
                         )}
                       </div>
                     )}

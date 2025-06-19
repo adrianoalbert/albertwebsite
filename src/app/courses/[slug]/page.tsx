@@ -1,5 +1,15 @@
 import { getContentByType, getContentBySlug } from '@/lib/markdown'
 
+// Helper function to format dates consistently
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+
 export async function generateStaticParams() {
   const courses = await getContentByType('courses')
   return courses.map((course) => ({
@@ -57,7 +67,7 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
             marginBottom: '30px',
             fontSize: '18px'
           }}>
-            {new Date(course.date).toLocaleDateString()}
+            {formatDate(course.date)}
           </p>
 
           {course.tags && course.tags.length > 0 && (
