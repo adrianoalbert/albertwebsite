@@ -1,0 +1,231 @@
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6, #ec4899);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.timelineItem {
+  padding: 20px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.timelineItem::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border: 3px solid white;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -10px;
+}
+
+.timelineCard {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timelineCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.left .timelineCard::before {
+  content: '';
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: -15px;
+  border: 15px solid;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.1);
+}
+
+.right .timelineCard::before {
+  content: '';
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: -15px;
+  border: 15px solid;
+  border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+
+.degreeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.institutionLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.timelineCard:hover .institutionLogo {
+  transform: scale(1.1);
+}
+
+.degreeTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.institution {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 8px 0;
+}
+
+.degree {
+  font-size: 16px;
+  color: #cbd5e1;
+  font-style: italic;
+  margin: 5px 0;
+}
+
+.period {
+  font-size: 16px;
+  color: #fbbf24;
+  font-weight: 600;
+  background: rgba(251, 191, 36, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 10px 0;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.activities {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activities p {
+  color: #e2e8f0;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.activities strong {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timelineItem {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timelineItem::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 22px;
+  }
+
+  .right {
+    left: 0%;
+  }
+  
+  .left .timelineCard::before,
+  .right .timelineCard::before {
+    left: -15px;
+    border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+  }
+}
+
+/* Animation for timeline items */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.right {
+  animation: slideInRight 0.6s ease-out;
+} 

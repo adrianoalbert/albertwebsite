@@ -1,0 +1,141 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/bg-tech-2.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  justify-content: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.headerIcon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.textContent {
+  font-size: 24px;
+  line-height: 1.6;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* Subsection headers */
+.aboutH2 {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.aboutH3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: #fff;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 15px;
+  }
+  
+  .header {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .headerIcon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .textContent {
+    font-size: 22px;
+    line-height: 1.7;
+    padding: 25px;
+  }
+  
+  .aboutH2 {
+    font-size: 1.5rem;
+  }
+  .aboutH3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 30px 10px;
+  }
+  
+  .header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .headerIcon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .textContent {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  .aboutH2 {
+    font-size: 1.3rem;
+  }
+  .aboutH3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 360px) {
+  .header {
+    font-size: 20px;
+  }
+  
+  .textContent {
+    font-size: 18px;
+    padding: 15px;
+  }
+} 
