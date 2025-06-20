@@ -1,9 +1,18 @@
-import { getContentByType } from '@/lib/markdown'
-import styles from '../styles/Card.module.css'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import { remark } from 'remark'
+import html from 'remark-html'
+import styles from '../styles/About.module.css'
 
 export default async function About() {
-  const about = await getContentByType('about');
-  const content = about[0]; // Get the first (and only) about file
+  const fullPath = path.join(process.cwd(), 'content/about/about.md')
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
+  const processedContent = await remark()
+    .use(html, { sanitize: false })
+    .process(content)
+  const contentHtml = processedContent.toString()
 
   return (
     <div className={styles.container}>
@@ -27,7 +36,13 @@ export default async function About() {
           </svg>
           About Me
         </div>
-        <div className={styles.textContent} dangerouslySetInnerHTML={{ __html: content.content }} />
+        <div 
+          className={styles.textContent}
+          style={{
+            fontSize: 'clamp(18px, 2vw, 22px)'
+          }}
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
       </div>
     </div>
   )

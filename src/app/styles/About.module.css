@@ -43,12 +43,14 @@
 }
 
 .textContent {
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.6;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px;
+  padding: 15px;
   border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Subsection headers */
@@ -85,7 +87,7 @@
   }
   
   .textContent {
-    font-size: 26px;
+    font-size: 20px;
     line-height: 1.7;
     padding: 25px;
   }
@@ -115,9 +117,14 @@
   }
   
   .textContent {
-    font-size: 24px;
+    font-size: 5px !important;
     line-height: 1.6;
     padding: 20px;
+  }
+  
+  /* More specific override for small mobile */
+  .container .content .textContent {
+    font-size: 5px !important;
   }
   
   .aboutH2 {
@@ -135,7 +142,7 @@
   }
   
   .textContent {
-    font-size: 22px;
+    font-size: 16px;
     padding: 15px;
   }
 } 

@@ -561,7 +561,7 @@ h3 {
     font-size: clamp(16px, 3.5vw, 22px) !important;
   }
   
-  p, div, span, a, blockquote {
+  p, span, a, blockquote {
     font-size: clamp(13px, 3vw, 16px) !important;
   }
   
@@ -572,15 +572,15 @@ h3 {
   }
   
   .markdown-content h1 {
-    font-size: clamp(28px, 7vw, 40px) !important;
+    font-size: clamp(18px, 4vw, 24px) !important;
   }
   
   .markdown-content h2 {
-    font-size: clamp(18px, 4vw, 26px) !important;
+    font-size: clamp(16px, 3.5vw, 22px) !important;
   }
   
   .markdown-content h3 {
-    font-size: clamp(16px, 3.5vw, 22px) !important;
+    font-size: clamp(14px, 3vw, 20px) !important;
   }
   
   .markdown-content a,
@@ -589,17 +589,53 @@ h3 {
   }
   
   .social-icons {
-    bottom: 20px;
-    gap: 25px;
+    bottom: 15px;
+    gap: 15px;
   }
   
   .social-icons a {
-    padding: 12px;
+    padding: 10px;
   }
   
   .social-icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .header {
+    font-size: clamp(24px, 6vw, 32px) !important;
+  }
+  
+  .page-header {
+    font-size: clamp(24px, 6vw, 32px) !important;
+  }
+  
+  div[style*="font-size: 36px"] {
+    font-size: clamp(24px, 6vw, 32px) !important;
+  }
+  
+  .certifications-content h1,
+  .courses-content h1,
+  .education-content h1,
+  .projects-content h1 {
+    font-size: clamp(24px, 6vw, 32px) !important;
+  }
+  
+  h1 {
+    font-size: clamp(20px, 5vw, 28px) !important;
+  }
+  
+  h2 {
+    font-size: clamp(18px, 4.5vw, 26px) !important;
+  }
+  
+  h3 {
+    font-size: clamp(16px, 4vw, 24px) !important;
+  }
+  
+  .about-text,
+  .publications-text {
+    font-size: clamp(12px, 2.5vw, 16px) !important;
   }
 }
 
@@ -645,7 +681,12 @@ h3 {
   
   .about-text,
   .publications-text {
-    font-size: clamp(12px, 2.5vw, 16px) !important;
+    font-size: 16px !important;
+  }
+  
+  /* Override for About Me page textContent */
+  div.textContent {
+    /* Removed conflicting font-size rule */
   }
   
   h1 {
@@ -660,8 +701,13 @@ h3 {
     font-size: clamp(14px, 3vw, 20px) !important;
   }
   
-  p, div, span, a, blockquote {
-    font-size: clamp(11px, 2.5vw, 14px) !important;
+  p, span, a, blockquote {
+    font-size: clamp(13px, 3vw, 16px) !important;
+  }
+  
+  /* Specific override for About Me textContent */
+  div.textContent {
+    /* Removed conflicting font-size rule */
   }
 }
 
