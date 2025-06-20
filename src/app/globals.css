@@ -802,10 +802,16 @@ div[style*="font-size: 36px"] {
 }
 
 .duration {
-  font-size: 14px;
-  color: #9ca3af;
-  margin: 0 0 8px 0;
-  font-weight: 500;
+  font-size: 14px !important;
+  color: #9ca3af !important;
+  margin: 0 0 8px 0 !important;
+  font-weight: 600 !important;
+  background: rgba(156, 163, 175, 0.1) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+  display: inline-block !important;
+  border: 1px solid rgba(156, 163, 175, 0.3) !important;
+  text-shadow: 0 0 10px rgba(156, 163, 175, 0.3) !important;
 }
 
 .activities {

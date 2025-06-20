@@ -134,14 +134,11 @@
 
 .period {
   font-size: 16px;
-  color: #fbbf24;
   font-weight: 600;
-  background: rgba(251, 191, 36, 0.1);
-  padding: 4px 12px;
-  border-radius: 20px;
+  color: #9ca3af;
   display: inline-block;
   margin: 10px 0;
-  border: 1px solid rgba(251, 191, 36, 0.3);
+  text-shadow: 0 0 10px rgba(156, 163, 175, 0.3);
 }
 
 .activities {
@@ -174,19 +171,13 @@
     padding-right: 25px;
   }
   
-  .timelineItem::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  .left::after, .right::after {
+  .timelineItem::after {
     left: 22px;
+    transform: none;
   }
 
-  .right {
-    left: 0%;
+  .left, .right {
+    left: 0;
   }
   
   .left .timelineCard::before,
