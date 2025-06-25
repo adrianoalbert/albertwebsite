@@ -4,6 +4,9 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import styles from '../styles/About.module.css'
+import dynamic from 'next/dynamic'
+
+const EducationSection = dynamic(() => import('../components/EducationSection'), { ssr: false })
 
 export default async function About() {
   const fullPath = path.join(process.cwd(), 'content/about/about.md')
@@ -43,6 +46,7 @@ export default async function About() {
           }}
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
+        <EducationSection />
       </div>
     </div>
   )

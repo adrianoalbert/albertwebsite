@@ -1,0 +1,103 @@
+.educationSection {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(30, 32, 40, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  padding: 28px 32px;
+  gap: 24px;
+}
+
+.logoWrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.logo {
+  object-fit: contain;
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.eduContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.institution {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.degree {
+  font-size: 1.05rem;
+  color: #bfc7d5;
+  margin-bottom: 2px;
+}
+
+.duration {
+  font-size: 0.98rem;
+  color: #bfc7d5;
+  margin-bottom: 2px;
+}
+
+.activities {
+  font-size: 0.97rem;
+  color: #bfc7d5;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 12px;
+    gap: 12px;
+  }
+  .logoWrap {
+    width: 48px;
+    height: 48px;
+  }
+  .logo {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .institution {
+    font-size: 1.1rem;
+  }
+  .degree, .duration, .activities {
+    font-size: 0.95rem;
+  }
+} 
