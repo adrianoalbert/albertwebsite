@@ -195,7 +195,7 @@
 /* Extra small mobile phones */
 @media (max-width: 360px) {
   .header {
-    font-size: 20px;
+    font-size: 22px;
   }
   
   .textContent {

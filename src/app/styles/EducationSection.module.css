@@ -4,7 +4,7 @@
 }
 
 .header {
-  font-size: 2.5rem;
+  font-size: 2rem !important;
   font-weight: bold;
   color: #fff;
   text-align: left;
@@ -104,13 +104,22 @@
 }
 
 @media (max-width: 768px) {
-  .header {
-    margin-left: calc(50% - 400px + 8px);
+  .educationSection .header {
+    font-size: 1.375rem !important;
+    margin-left: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .header {
-    margin-left: calc(50% - 400px + 5px);
+  .educationSection .header {
+    font-size: 1.125rem !important;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .educationSection .header {
+    font-size: 1.125rem !important;
+    margin-left: 10px;
   }
 } 
