@@ -7,6 +7,7 @@ import styles from '../styles/About.module.css'
 import dynamic from 'next/dynamic'
 
 const EducationSection = dynamic(() => import('../components/EducationSection'), { ssr: false })
+const HonorsAwardsSection = dynamic(() => import('../components/HonorsAwardsSection'), { ssr: false })
 
 export default async function About() {
   const fullPath = path.join(process.cwd(), 'content/about/about.md')
@@ -47,6 +48,7 @@ export default async function About() {
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
         <EducationSection />
+        <HonorsAwardsSection />
       </div>
     </div>
   )

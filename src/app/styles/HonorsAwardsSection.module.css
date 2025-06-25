@@ -1,4 +1,4 @@
-.educationSection {
+.honorsSection {
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -13,7 +13,7 @@
   margin-left: calc(50% - 400px + 10px);
 }
 
-.educationList {
+.awardsList {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -31,53 +31,54 @@
   gap: 24px;
 }
 
-.logoWrap {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  background: #fff;
-  border-radius: 12px;
-}
-
-.logo {
-  object-fit: contain;
-  width: 60px !important;
-  height: 60px !important;
-}
-
-.eduContent {
+.awardsContent {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .institution {
-  font-size: 1.25rem;
+  font-size: 1.18rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 2px;
 }
 
-.degree {
+.details {
   font-size: 1.05rem;
   color: #bfc7d5;
   margin-bottom: 2px;
 }
 
-.duration {
+.link {
+  color: #60a5fa;
   font-size: 0.98rem;
-  color: #bfc7d5;
+  text-decoration: underline;
   margin-bottom: 2px;
+  word-break: break-all;
+}
+
+.associationDetails {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 6px;
 }
 
 .activities {
   font-size: 0.97rem;
   color: #bfc7d5;
-  margin-top: 4px;
+}
+
+.awardsLogo {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {
@@ -87,19 +88,15 @@
     padding: 18px 12px;
     gap: 12px;
   }
-  .logoWrap {
-    width: 48px;
-    height: 48px;
-  }
-  .logo {
-    width: 44px !important;
-    height: 44px !important;
-  }
   .institution {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
-  .degree, .duration, .activities {
+  .details, .activities, .link {
     font-size: 0.95rem;
+  }
+  .awardsLogo {
+    width: 36px;
+    height: 36px;
   }
 }
 
