@@ -72,13 +72,20 @@
 }
 
 .awardsLogo {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   background: #fff;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.awardsLogo img {
+  object-fit: contain;
+  width: 60px !important;
+  height: 60px !important;
 }
 
 @media (max-width: 600px) {
@@ -95,28 +102,32 @@
     font-size: 0.95rem;
   }
   .awardsLogo {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
+  }
+  .awardsLogo img {
+    width: 44px !important;
+    height: 44px !important;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    font-size: 1.375rem !important;
+    font-size: 1.5rem !important;
     margin-left: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    font-size: 1.125rem !important;
+    font-size: 1.375rem !important;
     margin-left: 15px;
   }
 }
 
 @media (max-width: 360px) {
   .honorsSection .header {
-    font-size: 1.125rem !important;
+    font-size: 1.25rem !important;
     margin-left: 10px;
   }
 } 

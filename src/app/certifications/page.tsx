@@ -37,7 +37,7 @@ export default async function CertificationsPage() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.overlay}></div>
+      <div className={styles.certificationsOverlay}></div>
       <div className={styles.content}>
         <div className={styles.header}>
           <svg 
