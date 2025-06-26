@@ -465,7 +465,7 @@ h3 {
   
   .home-content h1 {
     white-space: nowrap !important;
-    font-size: 28px !important;
+    font-size: 26px !important;
     text-align: center;
     width: 100%;
     max-width: 100vw;
@@ -614,7 +614,7 @@ h3 {
 @media (max-width: 360px) {
   .home-content h1 {
     white-space: nowrap !important;
-    font-size: 28px !important;
+    font-size: 26px !important;
     text-align: center;
     width: 100%;
     max-width: 100vw;
