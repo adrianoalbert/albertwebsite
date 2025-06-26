@@ -91,7 +91,7 @@ body::before {
   position: absolute;
   inset: 0;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.65;
 }
 
 .home-content {
@@ -198,7 +198,7 @@ body::before {
   position: absolute;
   inset: 0;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .about-content {
@@ -571,7 +571,7 @@ h3 {
   }
   
   .social-icons {
-    bottom: 50px !important;
+    bottom: 30px !important;
   }
   
   .header {
@@ -688,6 +688,10 @@ h3 {
   /* Specific override for About Me textContent */
   div.textContent {
     /* Removed conflicting font-size rule */
+  }
+  
+  .social-icons {
+    bottom: 15px !important;
   }
 }
 
