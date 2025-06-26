@@ -880,4 +880,66 @@ div[style*="font-size: 36px"] {
   :root {
     --social-icons-bottom: 80px;
   }
+}
+
+/* Medium screen adjustments for 15-inch displays and similar */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .social-icons {
+    bottom: clamp(30px, 4vh, 60px);
+    gap: clamp(25px, 2.5vw, 35px);
+  }
+  
+  .main-nav {
+    margin-bottom: clamp(100px, 25vh, 140px);
+  }
+  
+  .home-content {
+    padding: 40px 20px;
+    min-height: 90vh;
+    justify-content: space-between;
+  }
+  
+  .home-content h1 {
+    margin-bottom: 25px;
+  }
+  
+  .subtitle {
+    margin-bottom: 50px;
+  }
+}
+
+/* Specific adjustments for common 15-inch laptop resolutions */
+@media (min-width: 1366px) and (max-width: 1440px) and (max-height: 900px) {
+  .social-icons {
+    bottom: clamp(40px, 5vh, 80px);
+  }
+  
+  .main-nav {
+    margin-bottom: clamp(120px, 30vh, 160px);
+  }
+  
+  .home-content {
+    min-height: 85vh;
+  }
+}
+
+/* Large screen adjustments for displays above 1440px */
+@media (min-width: 1441px) {
+  .social-icons {
+    bottom: clamp(20px, 2vh, 40px);
+    gap: clamp(30px, 2vw, 50px);
+  }
+  
+  .main-nav {
+    margin-bottom: clamp(80px, 20vh, 120px);
+  }
+  
+  .home-content {
+    padding: 60px 40px;
+  }
+  
+  .social-icon {
+    width: clamp(60px, 4vw, 90px);
+    height: clamp(60px, 4vw, 90px);
+  }
 } 
