@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9));
 }
 
 .certificationsOverlay {
@@ -511,12 +511,6 @@
     width: 9px;
     height: 9px;
   }
-  
-  .textContent {
-    font-size: 30px;
-    line-height: 1.6;
-    padding: 20px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -564,19 +558,6 @@
   .button svg {
     width: 9px;
     height: 9px;
-  }
-  
-  .textContent {
-    font-size: 30px;
-    line-height: 1.6;
-    padding: 20px;
-  }
-}
-
-/* Extra specific mobile override */
-@media screen and (max-width: 480px) {
-  .textContent {
-    font-size: 30px;
   }
 }
 

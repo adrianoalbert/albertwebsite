@@ -160,14 +160,14 @@
   }
   
   .textContent {
-    font-size: 5px !important;
+    font-size: 16px;
     line-height: 1.6;
     padding: 20px;
   }
   
   /* More specific override for small mobile */
   .container .content .textContent {
-    font-size: 5px !important;
+    font-size: 16px;
   }
   
   .aboutH2 {
