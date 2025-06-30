@@ -105,6 +105,7 @@ body::before {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: clamp(120px, 20vh, 200px);
 }
 
 .home-content h1 {
@@ -391,6 +392,7 @@ h3 {
 @media (max-width: 1024px) {
   .home-content {
     padding: 30px 20px;
+    padding-bottom: clamp(100px, 18vh, 160px);
   }
   
   .main-nav {
@@ -411,6 +413,7 @@ h3 {
 @media (max-width: 768px) {
   .home-content {
     padding: 20px 15px;
+    padding-bottom: clamp(80px, 15vh, 120px);
   }
   
   .main-nav {
@@ -456,6 +459,7 @@ h3 {
 @media (max-width: 480px) {
   .home-content {
     padding: 15px 10px;
+    padding-bottom: clamp(60px, 12vh, 100px);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -464,15 +468,13 @@ h3 {
   }
   
   .home-content h1 {
-    white-space: nowrap !important;
+    white-space: normal !important;
     font-size: 26px !important;
     text-align: center;
     width: 100%;
     max-width: 100vw;
     padding: 0 8px;
     box-sizing: border-box;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
     line-height: 1.2 !important;
   }
   
@@ -612,16 +614,19 @@ h3 {
 }
 
 @media (max-width: 360px) {
+  .home-content {
+    padding: 10px 8px;
+    padding-bottom: clamp(50px, 10vh, 80px);
+  }
+  
   .home-content h1 {
-    white-space: nowrap !important;
+    white-space: normal !important;
     font-size: 26px !important;
     text-align: center;
     width: 100%;
     max-width: 100vw;
     padding: 0 8px;
     box-sizing: border-box;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
     line-height: 1.2 !important;
   }
   
@@ -896,6 +901,7 @@ div[style*="font-size: 36px"] {
   
   .home-content {
     padding: 40px 20px;
+    padding-bottom: clamp(140px, 25vh, 200px);
     min-height: 90vh;
     justify-content: space-between;
   }
@@ -921,6 +927,7 @@ div[style*="font-size: 36px"] {
   
   .home-content {
     min-height: 85vh;
+    padding-bottom: clamp(160px, 30vh, 220px);
   }
 }
 
@@ -937,6 +944,7 @@ div[style*="font-size: 36px"] {
   
   .home-content {
     padding: 60px 40px;
+    padding-bottom: clamp(120px, 20vh, 180px);
   }
   
   .social-icon {
