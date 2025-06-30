@@ -907,8 +907,18 @@ div[style*="font-size: 36px"] {
     margin-bottom: 180px;
   }
   .nav-spacer {
-    height: 220px;
+    height: 80px;
     width: 100%;
     pointer-events: none;
+  }
+  .main-nav a {
+    font-size: 30px !important;
+    padding: 12px 28px !important;
+  }
+  .main-nav {
+    gap: 16px;
+  }
+  .subtitle {
+    font-size: 32px !important;
   }
 } 
