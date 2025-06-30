@@ -17,6 +17,7 @@ export default function Home() {
           <Link href="/publications">Publications</Link>
           <Link href="/projects">Projects</Link>
         </nav>
+        <div className="nav-spacer"></div>
       </div>
 
       <div className="social-icons">

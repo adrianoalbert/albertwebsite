@@ -895,4 +895,20 @@ div[style*="font-size: 36px"] {
 /* Using base settings that work for 13-14 inch screens */
 
 /* Large screen adjustments for displays above 1440px */
-/* Using base settings that work for 13-14 inch screens */ 
+/* Using base settings that work for 13-14 inch screens */
+
+@media (min-width: 1366px) {
+  .home-content {
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-bottom: 0;
+  }
+  .main-nav {
+    margin-bottom: 180px;
+  }
+  .nav-spacer {
+    height: 220px;
+    width: 100%;
+    pointer-events: none;
+  }
+} 
