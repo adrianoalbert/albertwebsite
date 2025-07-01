@@ -912,7 +912,7 @@ div[style*="font-size: 36px"] {
     pointer-events: none;
   }
   .main-nav a {
-    font-size: 36px !important;
+    font-size: clamp(48px, 2.5vw, 56px) !important;
     padding: 12px 28px !important;
   }
   .main-nav {
