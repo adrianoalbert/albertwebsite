@@ -109,7 +109,7 @@ body::before {
 }
 
 .home-content h1 {
-  font-size: clamp(48px, 10vw, 72px);
+  font-size: clamp(48px, 10vw, 64px);
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
@@ -133,7 +133,7 @@ body::before {
 }
 
 .main-nav a {
-  font-size: clamp(38px, 3vw, 52px) !important;
+  font-size: clamp(44px, 3vw, 52px) !important;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
@@ -912,7 +912,7 @@ div[style*="font-size: 36px"] {
     pointer-events: none;
   }
   .main-nav a {
-    font-size: 30px !important;
+    font-size: 40px !important;
     padding: 12px 28px !important;
   }
   .main-nav {
