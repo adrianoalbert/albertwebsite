@@ -133,7 +133,7 @@ body::before {
 }
 
 .main-nav a {
-  font-size: clamp(48px, 2.5vw, 56px) !important;
+  font-size: clamp(40px, 2.5vw, 48px) !important;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
@@ -912,7 +912,7 @@ div[style*="font-size: 36px"] {
     pointer-events: none;
   }
   .main-nav a {
-    font-size: clamp(48px, 2.5vw, 56px) !important;
+    font-size: clamp(40px, 2.5vw, 48px) !important;
     padding: 12px 28px !important;
   }
   .main-nav {
