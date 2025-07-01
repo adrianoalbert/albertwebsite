@@ -25,8 +25,21 @@ const contentDirectory = path.join(process.cwd(), 'content')
 export async function getContentByType(type: string): Promise<ContentItem[]> {
   try {
     const fullPath = path.join(contentDirectory, type)
+    
+    // Check if directory exists
+    if (!fs.existsSync(fullPath)) {
+      console.log(`Directory ${fullPath} does not exist, returning empty array`)
+      return []
+    }
+    
     const fileNames = fs.readdirSync(fullPath)
       .filter(fileName => fileName.endsWith('.md')) // Only get .md files
+    
+    // If no markdown files found, return empty array
+    if (fileNames.length === 0) {
+      console.log(`No markdown files found in ${fullPath}`)
+      return []
+    }
     const allContent = await Promise.all(
       fileNames.map(async (fileName) => {
         const slug = fileName.replace(/\.md$/, '')

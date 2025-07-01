@@ -1,7 +1,6 @@
-import { getContentByType } from '@/lib/markdown'
-
 export default async function ProjectsPage() {
-  const projects = await getContentByType('projects')
+  // Projects directory doesn't exist, so we'll show a coming soon page
+  const projects = []
 
   return (
     <div style={{
