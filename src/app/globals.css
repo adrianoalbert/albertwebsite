@@ -133,7 +133,7 @@ body::before {
 }
 
 .main-nav a {
-  font-size: clamp(44px, 3vw, 52px) !important;
+  font-size: clamp(48px, 3vw, 58px) !important;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
@@ -904,7 +904,7 @@ div[style*="font-size: 36px"] {
     padding-bottom: 0;
   }
   .main-nav {
-    margin-bottom: 180px;
+    margin-bottom: 100px;
   }
   .nav-spacer {
     height: 80px;
@@ -920,5 +920,8 @@ div[style*="font-size: 36px"] {
   }
   .subtitle {
     font-size: 32px !important;
+  }
+  .social-icons {
+    bottom: 20px !important;
   }
 } 
