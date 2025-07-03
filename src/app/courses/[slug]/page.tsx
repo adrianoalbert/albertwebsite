@@ -95,6 +95,7 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
               fontSize: '20px',
               lineHeight: '1.8'
             }}
+            className="course-content"
             dangerouslySetInnerHTML={{ __html: course.content }} 
           />
         </div>

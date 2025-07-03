@@ -66,9 +66,3 @@ certificate: '/images/courses/Cisco CSAU Certificate.pdf'
 13. Ansibleを使ったネットワークデータの収集
 14. Ansibleを使った構成のビルドとデプロイ
 
-## Credentials
-- **Certificate**: Cisco CSAU Certificate
-- **Issued By**: Cisco Systems
-- **Issue Date**: January 14, 2022
-- **Credential ID**: CSAU-2022-001
-- **Verification URL**: https://www.credly.com/org/cisco/badge/introducing-automation-for-cisco-solutions

@@ -611,6 +611,36 @@ h3 {
   .publications-text {
     font-size: 16px !important;
   }
+
+  /* Course content responsive styles */
+  .course-content {
+    font-size: clamp(13px, 3vw, 16px) !important;
+  }
+
+  .course-content h1 {
+    font-size: clamp(18px, 4vw, 24px) !important;
+  }
+
+  .course-content h2 {
+    font-size: clamp(16px, 3.5vw, 22px) !important;
+  }
+
+  .course-content h3 {
+    font-size: clamp(14px, 3vw, 20px) !important;
+  }
+
+  .course-content p {
+    font-size: clamp(13px, 3vw, 16px) !important;
+  }
+
+  .course-content ul,
+  .course-content ol {
+    font-size: clamp(13px, 3vw, 16px) !important;
+  }
+
+  .course-content li {
+    font-size: clamp(13px, 3vw, 16px) !important;
+  }
 }
 
 @media (max-width: 360px) {
