@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import styles from '../styles/About.module.css'
+import cardStyles from '../styles/Card.module.css'
 import dynamic from 'next/dynamic'
 
 const EducationSection = dynamic(() => import('../components/EducationSection'), { ssr: false })
@@ -22,7 +23,7 @@ export default async function About() {
     <div className={styles.container}>
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <div className={styles.header}>
+        <div className={cardStyles.header}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="52"
@@ -33,7 +34,7 @@ export default async function About() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className={styles.headerIcon}
+            className={cardStyles.headerIcon}
           >
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
