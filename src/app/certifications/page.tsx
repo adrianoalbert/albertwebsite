@@ -60,7 +60,7 @@ export default async function CertificationsPage() {
           <table className={styles.certTable}>
             <thead>
               <tr>
-                <th className={styles.centerHeader}>Certification</th>
+                <th>Certification</th>
                 <th>Issuer</th>
                 <th>Date</th>
                 <th>Status</th>
