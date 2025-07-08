@@ -74,10 +74,8 @@ body::before {
 /* Home page styles */
 .home-page {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr auto;
   min-height: 100vh;
   width: 100%;
   text-align: center;
@@ -85,6 +83,7 @@ body::before {
   background-size: cover;
   background-position: center;
   color: white;
+  overflow-x: hidden;
 }
 
 .home-overlay {
@@ -105,11 +104,14 @@ body::before {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: clamp(120px, 20vh, 200px);
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  grid-row: 1;
 }
 
 .home-content h1 {
-  font-size: clamp(48px, 10vw, 64px);
+  font-size: clamp(24px, 5vw, 64px);
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
@@ -118,9 +120,9 @@ body::before {
 }
 
 .subtitle {
-  font-size: clamp(44px, 4vw, 64px) !important;
+  font-size: clamp(18px, 2.8vw, 64px) !important;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   line-height: 1.4;
 }
@@ -128,16 +130,19 @@ body::before {
 .main-nav {
   display: flex;
   flex-direction: column;
-  margin-bottom: clamp(60px, 15vh, 100px);
+  margin-bottom: clamp(5px, 2vh, 15px);
   gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .main-nav a {
-  font-size: clamp(40px, 2.5vw, 48px) !important;
+  font-size: clamp(22px, 2.5vw, 48px) !important;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
-  padding: 14px 32px !important;
+  padding: 14px 28px !important;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
@@ -147,15 +152,17 @@ body::before {
 }
 
 .social-icons {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   z-index: 50;
-  bottom: var(--social-icons-bottom, clamp(5px, 1vh, 10px));
   gap: clamp(20px, 3vw, 40px);
+  width: auto;
+  max-width: 100vw;
+  box-sizing: border-box;
+  grid-row: 2;
+  padding: clamp(2px, 0.5vh, 5px) 0;
 }
 
 .social-icons a {
@@ -389,6 +396,75 @@ h3 {
 }
 
 /* Responsive design */
+
+/* Specific breakpoint for 11-inch screens (1366x768) */
+@media (max-width: 1366px) and (min-width: 1025px) {
+  .home-content {
+    padding: 25px 20px;
+    padding-bottom: clamp(90px, 16vh, 140px);
+    max-width: 1000px;
+  }
+  
+  .home-content h1 {
+    font-size: clamp(28px, 4.5vw, 42px);
+    margin-bottom: 15px;
+  }
+  
+  .subtitle {
+    font-size: clamp(20px, 2.5vw, 36px) !important;
+    margin-bottom: 30px;
+  }
+  
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: clamp(40px, 10vh, 60px);
+  }
+  
+  .main-nav a {
+    font-size: clamp(24px, 2.2vw, 36px) !important;
+    padding: 16px 32px !important;
+  }
+  
+  .social-icons {
+    gap: clamp(15px, 2.5vw, 30px);
+    position: absolute;
+    bottom: clamp(40px, 8vh, 80px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-icon {
+    width: clamp(40px, 5vw, 70px);
+    height: clamp(40px, 5vw, 70px);
+  }
+  
+  .publications-content,
+  .certifications-content,
+  .courses-content,
+  .about-content {
+    padding: 1.8rem;
+  }
+}
+
+/* Additional breakpoint for smaller 11-inch screens */
+@media (max-width: 1366px) and (min-width: 1025px) and (max-height: 800px) {
+  .home-content h1 {
+    font-size: clamp(24px, 4vw, 36px);
+  }
+  
+  .subtitle {
+    font-size: clamp(18px, 2.2vw, 32px) !important;
+  }
+  
+  .main-nav a {
+    font-size: clamp(22px, 2vw, 32px) !important;
+    padding: 14px 28px !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .home-content {
     padding: 30px 20px;
@@ -572,10 +648,6 @@ h3 {
     font-size: clamp(13px, 3vw, 16px) !important;
   }
   
-  .social-icons {
-    bottom: 30px !important;
-  }
-  
   .header {
     font-size: clamp(24px, 6vw, 32px) !important;
   }
@@ -726,7 +798,7 @@ h3 {
   }
   
   .social-icons {
-    bottom: 15px !important;
+    bottom: 120px !important;
   }
 }
 
@@ -908,13 +980,13 @@ div[style*="font-size: 36px"] {
 /* Mobile positioning */
 @media (max-width: 480px) {
   :root {
-    --social-icons-bottom: 80px;
+    --social-icons-bottom: 120px;
   }
 }
 
 @media (max-width: 360px) {
   :root {
-    --social-icons-bottom: 80px;
+    --social-icons-bottom: 120px;
   }
 }
 
@@ -953,11 +1025,23 @@ div[style*="font-size: 36px"] {
     margin-bottom: 20px;
   }
   .social-icons {
-    bottom: var(--social-icons-bottom, clamp(5px, 1vh, 10px));
+    position: absolute;
+    bottom: clamp(60px, 10vh, 120px);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
-/* Additional rule for very large screens */
+/* Specific optimization for 13-14 inch screens (1440p) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .social-icons {
+    position: absolute;
+    bottom: clamp(70px, 11vh, 130px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 @media (min-width: 1920px) {
   .home-content {
     justify-content: space-between;
@@ -968,6 +1052,9 @@ div[style*="font-size: 36px"] {
     margin-bottom: 120px;
   }
   .social-icons {
-    bottom: var(--social-icons-bottom, clamp(5px, 1vh, 10px));
+    position: absolute;
+    bottom: clamp(80px, 12vh, 150px);
+    left: 50%;
+    transform: translateX(-50%);
   }
 } 
