@@ -497,6 +497,13 @@ h3 {
     gap: 15px;
   }
   
+  .social-icons {
+    position: absolute;
+    bottom: clamp(20px, 4vh, 40px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
   .publications-content,
   .certifications-content,
   .courses-content,
@@ -571,6 +578,13 @@ h3 {
   
   .main-nav {
     gap: 14px;
+  }
+  
+  .social-icons {
+    position: absolute;
+    bottom: clamp(15px, 3vh, 30px);
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .about-content h1 {
@@ -730,6 +744,13 @@ h3 {
     padding: 0 8px;
     box-sizing: border-box;
     line-height: 1.2 !important;
+  }
+  
+  .social-icons {
+    position: absolute;
+    bottom: clamp(10px, 2vh, 20px);
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .subtitle {
@@ -977,18 +998,7 @@ div[style*="font-size: 36px"] {
   }
 }
 
-/* Mobile positioning */
-@media (max-width: 480px) {
-  :root {
-    --social-icons-bottom: 120px;
-  }
-}
-
-@media (max-width: 360px) {
-  :root {
-    --social-icons-bottom: 120px;
-  }
-}
+/* Mobile positioning - now handled directly in each breakpoint */
 
 /* Medium screen adjustments for 15-inch displays and similar */
 /* Using base settings that work for 13-14 inch screens */
