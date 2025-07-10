@@ -18,18 +18,18 @@ export default function Home() {
           <Link href="/projects">Projects</Link>
         </nav>
         <div className="nav-spacer"></div>
-      </div>
-
-      <div className="social-icons">
-        <a href="https://x.com/adrianoalbert" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <SiX className="social-icon" />
-        </a>
-        <a href="https://github.com/adrianoalbert/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <FaGithub className="social-icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/adrianoalbertmuniz/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <FaLinkedin className="social-icon" />
-        </a>
+        
+        <div className="social-icons">
+          <a href="https://x.com/adrianoalbert" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <SiX className="social-icon" />
+          </a>
+          <a href="https://github.com/adrianoalbert/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub className="social-icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/adrianoalbertmuniz/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin className="social-icon" />
+          </a>
+        </div>
       </div>
     </div>
   );

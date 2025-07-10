@@ -490,6 +490,7 @@ h3 {
   .home-content {
     padding: 10px 15px;
     padding-bottom: clamp(80px, 15vh, 120px);
+    justify-content: flex-start;
   }
   
   .main-nav {
@@ -498,10 +499,12 @@ h3 {
   }
   
   .social-icons {
-    position: absolute;
-    bottom: clamp(25px, 5vh, 50px);
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    bottom: unset;
+    left: unset;
+    transform: none;
+    margin-top: 24px;
+    grid-row: unset;
   }
   
   .publications-content,
@@ -547,7 +550,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .home-content h1 {
@@ -581,10 +584,12 @@ h3 {
   }
   
   .social-icons {
-    position: absolute;
-    bottom: clamp(10px, 2vh, 20px);
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    bottom: unset;
+    left: unset;
+    transform: none;
+    margin-top: 18px;
+    grid-row: unset;
   }
   
   .about-content h1 {
