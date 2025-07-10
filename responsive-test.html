@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .screen-size {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .breakpoint-info {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .breakpoint-info h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+        .breakpoint-info ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .breakpoint-info li {
+            margin-bottom: 5px;
+        }
+        .test-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .test-links a {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .test-links a:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Responsive Design Test for 11-inch Screens</h1>
+        
+        <div class="screen-size" id="current-size">
+            Current Screen Size: <span id="width">-</span> x <span id="height">-</span>
+        </div>
+        
+        <div class="breakpoint-info">
+            <h3>Target Breakpoints for 11-inch Screens:</h3>
+            <ul>
+                <li><strong>11-inch Laptops:</strong> 1366x768 resolution</li>
+                <li><strong>Breakpoint:</strong> @media (max-width: 1366px) and (min-width: 1025px)</li>
+                <li><strong>Font Sizes:</strong> Optimized for readability on smaller screens</li>
+                <li><strong>Navigation:</strong> Responsive layout with proper spacing</li>
+            </ul>
+        </div>
+        
+        <div class="breakpoint-info">
+            <h3>Changes Made:</h3>
+            <ul>
+                <li>Added proper viewport meta tag</li>
+                <li>Reduced font sizes for better fit on 11-inch screens</li>
+                <li>Added specific breakpoint for 1366px width</li>
+                <li>Improved navigation spacing and layout</li>
+                <li>Added overflow protection to prevent horizontal scrolling</li>
+                <li>Optimized social icons positioning</li>
+                <li><strong>Updated font sizes:</strong> Title: 28px-64px, Subtitle: 18px-64px</li>
+            </ul>
+        </div>
+        
+        <div class="test-links">
+            <a href="http://localhost:3000" target="_blank">Test Homepage</a>
+            <a href="http://localhost:3000/about" target="_blank">Test About Page</a>
+            <a href="http://localhost:3000/publications" target="_blank">Test Publications</a>
+            <a href="http://localhost:3000/certifications" target="_blank">Test Certifications</a>
+        </div>
+        
+        <div class="breakpoint-info">
+            <h3>Testing Instructions:</h3>
+            <ul>
+                <li>Open the website in your browser</li>
+                <li>Use browser dev tools (F12) to simulate 11-inch screen (1366x768)</li>
+                <li>Check that text is readable and not too large</li>
+                <li>Verify navigation fits properly without overflow</li>
+                <li>Test on actual 11-inch device if available</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function updateScreenSize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('width').textContent = width;
+            document.getElementById('height').textContent = height;
+            
+            // Add color coding based on screen size
+            const sizeElement = document.getElementById('current-size');
+            if (width <= 1366 && width > 1024) {
+                sizeElement.style.background = '#28a745'; // Green for 11-inch target
+                sizeElement.textContent = `Current Screen Size: ${width} x ${height} (11-inch target range)`;
+            } else if (width <= 1024) {
+                sizeElement.style.background = '#ffc107'; // Yellow for tablet/mobile
+                sizeElement.textContent = `Current Screen Size: ${width} x ${height} (Tablet/Mobile range)`;
+            } else {
+                sizeElement.style.background = '#007bff'; // Blue for larger screens
+                sizeElement.textContent = `Current Screen Size: ${width} x ${height} (Large screen)`;
+            }
+        }
+        
+        // Update on load and resize
+        window.addEventListener('load', updateScreenSize);
+        window.addEventListener('resize', updateScreenSize);
+    </script>
+</body>
+</html> 

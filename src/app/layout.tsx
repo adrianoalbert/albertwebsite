@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Lead IT/OT Systems Engineer | Experienced in Computer Networks Research",
   description: "Professional portfolio and blog of a Lead IT/OT Systems Engineer with expertise in computer networks research, cybersecurity, and industrial automation.",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
@@ -17,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      </head>
       <body className={inter.className}>
         {children}
         <Analytics />

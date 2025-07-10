@@ -99,6 +99,45 @@
   line-height: 1.6;
 }
 
+/* Responsive styles for different screen sizes */
+
+/* 11-inch screens (1366x768) */
+@media (max-width: 1366px) and (min-width: 1025px) {
+  .content {
+    padding: 50px 25px;
+    max-width: 900px;
+  }
+  
+  .header {
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+  
+  .headerIcon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .textContent {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  .aboutH2 {
+    font-size: 1.8rem;
+  }
+  
+  .aboutH3 {
+    font-size: 1.25rem;
+  }
+  
+  .textContent h3 {
+    font-size: 1.3rem;
+    margin-top: 1.8rem;
+  }
+}
+
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .content {
