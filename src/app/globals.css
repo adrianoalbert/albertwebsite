@@ -542,7 +542,7 @@ h3 {
 @media (max-width: 480px) {
   .home-content {
     padding: 15px 10px;
-    padding-bottom: clamp(60px, 12vh, 100px);
+    padding-bottom: clamp(30px, 6vh, 50px);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -582,7 +582,7 @@ h3 {
   
   .social-icons {
     position: absolute;
-    bottom: clamp(20px, 4vh, 40px);
+    bottom: clamp(10px, 2vh, 20px);
     left: 50%;
     transform: translateX(-50%);
   }
