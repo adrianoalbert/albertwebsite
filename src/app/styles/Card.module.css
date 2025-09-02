@@ -339,7 +339,7 @@
 /* Mobile timeline styles */
 @media screen and (max-width: 768px) {
   .timeline::after {
-    left: 20px !important;
+    left: 25px !important;
   }
   
   .timelineItem {
@@ -354,19 +354,19 @@
   }
   
   .timelineDot {
-    left: 10px !important;
+    left: 15px !important;
     right: auto !important;
   }
   
   .timelineItem:nth-child(even) .timelineDot {
-    left: 10px !important;
+    left: 15px !important;
     right: auto !important;
   }
   
   .timelineItem:nth-child(odd) .timelineDate {
     text-align: left;
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 20px;
     position: relative !important;
     right: auto !important;
     left: auto !important;
@@ -379,7 +379,7 @@
   .timelineItem:nth-child(even) .timelineDate {
     text-align: left;
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 20px;
     position: relative !important;
     right: auto !important;
     left: auto !important;
