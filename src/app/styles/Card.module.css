@@ -392,6 +392,10 @@
   .timelineContent {
     padding: 0;
   }
+  
+  .timelineItem:nth-child(odd) .timelineContent {
+    padding-left: 20px;
+  }
 }
 
 @media (max-width: 1024px) {
