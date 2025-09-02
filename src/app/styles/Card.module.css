@@ -242,7 +242,7 @@
 }
 
 .timelineItem:nth-child(even) {
-  left: 46%;
+  left: 50%;
 }
 
 .timelineDot {
