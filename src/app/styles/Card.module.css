@@ -242,7 +242,7 @@
 }
 
 .timelineItem:nth-child(even) {
-  left: 50%;
+  left: 46%;
 }
 
 .timelineDot {
@@ -287,11 +287,11 @@
 }
 
 .timelineItem:nth-child(odd) .timelineContent {
-  padding-left: 40px;
+  padding-left: 10px;
 }
 
 .timelineItem:nth-child(even) .timelineContent {
-  padding-left: 40px;
+  padding-left: 10px;
 }
 
 .timelineContent {
