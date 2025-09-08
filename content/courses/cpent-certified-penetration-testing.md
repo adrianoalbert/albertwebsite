@@ -16,143 +16,148 @@ certificate: 'https://aspen.eccouncil.org/VerifyBadge?type=training&a=oxqD/vlWIQ
 - **Provider**: EC-Council
 - **Course Code**: CPENT
 
-## Course Overview
-The Certified Penetration Testing Professional (CPENT) program is designed to provide comprehensive training in penetration testing methodologies, tools, and techniques. This advanced certification covers both theoretical knowledge and practical skills required to conduct effective penetration tests across various environments including networks, web applications, IoT devices, and cloud platforms.
+## コース概要
+CPENT（Certified Penetration Testing Professional）プログラムは、ペネトレーションテストの方法論、ツール、技術の包括的なトレーニングを提供するように設計されています。この上級認定資格は、ネットワーク、Webアプリケーション、IoTデバイス、クラウドプラットフォームなど、さまざまな環境で効果的なペネトレーションテストを実施するために必要な理論的知識と実践的スキルの両方をカバーしています。
 
-## Learning Objectives
-- Master advanced penetration testing methodologies and frameworks
-- Develop expertise in network penetration testing techniques
-- Learn web application security assessment and exploitation
-- Understand IoT and OT security testing approaches
-- Gain proficiency in cloud security assessment
-- Master binary analysis and reverse engineering
-- Learn advanced evasion techniques and bypassing security controls
-- Develop skills in report writing and vulnerability communication
+## 学習目標
+● 高度なペネトレーションテストの方法論とフレームワークをマスターする
+● ネットワークペネトレーションテスト技術の専門知識を身につける
+● Webアプリケーションのセキュリティ評価と悪用手法を学ぶ
+● IoTとOTセキュリティテストのアプローチを理解する
+● クラウドセキュリティ評価の習熟度を向上させる
+● バイナリ解析とリバースエンジニアリングをマスターする
+● 高度な回避技術とセキュリティ制御のバイパス手法を学ぶ
+● レポート作成と脆弱性コミュニケーションのスキルを身につける
 
-## Course Content
+## 学習内容
 
-### Module 01: Introduction to Penetration Testing and Methodologies
-- **Penetration Testing Concepts**
-- **LPT Penetration Testing Methodology**
-- **Guidelines and Recommendations for Penetration Testing**
+### モジュール01: ペネトレーションテストと方法論の紹介
+● ペネトレーションテストの概念
+● LPTペネトレーションテスト方法論
+● ペネトレーションテストのガイドラインと推奨事項
 
-### Module 02: Penetration Testing Scoping and Engagement
-- **Request for Proposal**
-- **Preparing Response Requirements for Proposal Submission**
-- **Setting the Rules of Engagement**
-- **Establishing Communication Lines**
-- **Timeline**
-- **Time/Location**
-- **Frequency of Meetings**
-- **Time of Day**
-- **Identifying Personnel for Assistance**
-- **Handling Legal Issues in Penetration Testing Engagement**
-- **Preparing for the Test**
-- **Handling Scope Creeping During Pen Testing**
+### モジュール02: ペネトレーションテストのスコープと実施計画
+● 提案依頼書（RFP）の理解
+● 提案書の要件準備と提出
+● エンゲージメントルールの設定
+● コミュニケーション回線の確立
+● タイムライン設定と時間/場所の調整
+● 支援担当者の特定とリーガル問題の処理
+● テストの準備とスコープクリープの対処
 
-### Module 03: Open Source Intelligence (OSINT)
-- **OSINT through the WWW**
-- **OSINT through Website Analysis**
-- **OSINT through DNS Interrogation**
-- **Automating the OSINT Process using Tools/Frameworks/Scripts**
+### モジュール03: オープンソースインテリジェンス（OSINT）
+● Webを通じたOSINT収集
+● Webサイト分析によるOSINT
+● DNS調査によるOSINT
+● ツール/フレームワーク/スクリプトを使用したOSINTプロセスの自動化
 
-### Module 04: Social Engineering Penetration Testing
-- **Social Engineering Penetration Testing Concepts**
-- **Social Engineering Penetration Testing Using E-mail Attack Vector**
-- **Social Engineering Penetration Testing Using Telephone Attack Vector**
-- **Social Engineering Penetration Testing Using Physical Attack Vector**
-- **Reporting and Countermeasures/Recommendations**
+### モジュール04: ソーシャルエンジニアリングペネトレーションテスト
+● ソーシャルエンジニアリングペネトレーションテストの概念
+● 電子メール攻撃ベクトルを使用したテスト
+● 電話攻撃ベクトルを使用したテスト
+● 物理的攻撃ベクトルを使用したテスト
+● レポート作成と対策/推奨事項
 
-### Module 05: Network Penetration Testing – External
-- **Port Scanning**
-- **OS and Service Fingerprinting**
-- **Exploit Verification**
+### モジュール05: ネットワークペネトレーションテスト - 外部
+● ポートスキャニング技術
+● OSとサービスフィンガープリンティング
+● エクスプロイト検証手法
 
-### Module 06: Network Penetration Testing – Internal
-- **Footprinting**
-- **Network Scanning**
-- **OS and Service Fingerprinting**
-- **Enumeration**
-- **Vulnerability Assessment**
-- **Windows Exploitation**
-- **Unix/Linux Exploitation**
-- **Other Internal Network Exploitation Techniques**
-- **Automating Internal Network Penetration Test Effort**
-- **Post Exploitation**
-- **Advanced Tips and Techniques**
+### モジュール06: ネットワークペネトレーションテスト - 内部
+● フットプリンティング手法
+● ネットワークスキャニング
+● OSとサービスフィンガープリンティング
+● 列挙（Enumeration）技術
+● 脆弱性評価
+● Windows環境でのエクスプロイテーション
+● Unix/Linux環境でのエクスプロイテーション
+● その他の内部ネットワークエクスプロイテーション技術
+● 内部ネットワークペネトレーションテストの自動化
+● ポストエクスプロイテーション
+● 高度なテクニックとヒント
 
-### Module 07: Network Penetration Testing – Perimeter Devices
-- **Assessing Firewall Security Implementation**
-- **Assessing IDS Security Implementation**
-- **Assessing Security of Routers**
-- **Assessing Security of Switches**
+### モジュール07: ネットワークペネトレーションテスト - 境界デバイス
+● ファイアウォールセキュリティ実装の評価
+● IDS（侵入検知システム）セキュリティ実装の評価
+● ルーターのセキュリティ評価
+● スイッチのセキュリティ評価
 
-### Module 08: Web Application Penetration Testing
-- **Discover Web Application Default Content**
-- **Discover Web Application Hidden Content**
-- **Conduct Web Vulnerability Scanning**
-- **Test for SQL Injection Vulnerabilities**
-- **Test for XSS Vulnerabilities**
-- **Test for Parameter Tampering**
-- **Test for Weak Cryptography Vulnerabilities**
-- **Tests for Security Misconfiguration Vulnerabilities**
-- **Test for Client-Side Attack**
-- **Tests for Broken Authentication and Authorization Vulnerabilities**
-- **Tests for Broken Session Management Vulnerabilities**
-- **Test for Web Services Security**
-- **Test for Business Logic Flaws**
-- **Test for Web Server Vulnerabilities**
-- **Test for Thick Clients Vulnerabilities**
-- **WordPress Testing**
+### モジュール08: Webアプリケーションペネトレーションテスト
+● Webアプリケーションのデフォルトコンテンツ発見
+● Webアプリケーションの隠されたコンテンツ発見
+● Web脆弱性スキャニングの実施
+● SQLインジェクション脆弱性のテスト
+● XSS（クロスサイトスクリプティング）脆弱性のテスト
+● パラメータタンパリングのテスト
+● 弱い暗号化脆弱性のテスト
+● セキュリティ設定ミス脆弱性のテスト
+● クライアントサイド攻撃のテスト
+● 認証と認可の脆弱性テスト
+● セッション管理の脆弱性テスト
+● Webサービスセキュリティのテスト
+● ビジネスロジックの欠陥テスト
+● Webサーバ脆弱性のテスト
+● シッククライアント脆弱性のテスト
+● WordPressのテスト
 
-### Module 09: Wireless Penetration Testing
-- **Wireless Local Area Network (WLAN) Penetration Testing**
-- **RFID Penetration Testing**
-- **NFC Penetration Testing**
+### モジュール09: ワイヤレスペネトレーションテスト
+● ワイヤレスローカルエリアネットワーク（WLAN）ペネトレーションテスト
+● RFIDペネトレーションテスト
+● NFCペネトレーションテスト
 
-### Module 10: IoT Penetration Testing
-- **IoT Attacks and Threats**
-- **IoT Penetration Testing**
+### モジュール10: IoTペネトレーションテスト
+● IoT攻撃と脅威の理解
+● IoTデバイスのペネトレーションテスト手法
 
-### Module 11: OT and SCADA Penetration Testing
-- **OT/SCADA Concepts**
-- **Modbus**
-- **ICS and SCADA Pen Testing**
+### モジュール11: OTとSCADAペネトレーションテスト
+● OT/SCADAの概念
+● Modbusプロトコルの理解
+● ICSとSCADAのペネトレーションテスト
 
-### Module 12: Cloud Penetration Testing
-- **Cloud Penetration Testing**
-- **AWS Specific Penetration Testing**
-- **Azure Specific Penetration Testing**
-- **Google Cloud Platform Specific Penetration Testing**
+### モジュール12: クラウドペネトレーションテスト
+● クラウド環境でのペネトレーションテスト
+● AWS特有のペネトレーションテスト
+● Azure特有のペネトレーションテスト
+● Google Cloud Platform特有のペネトレーションテスト
 
-### Module 13: Binary Analysis and Exploitation
-- **Binary Coding Concepts**
-- **Binary Analysis Methodology**
+### モジュール13: バイナリ解析と悪用
+● バイナリコーディングの概念
+● バイナリ解析の方法論
 
-### Module 14: Report Writing and Post Testing Actions
-- **Penetration Testing Report: An Overview**
-- **Phases of Report Development**
-- **Report Components**
-- **Penetration Testing Report Analysis**
-- **Penetration Testing Report Delivery**
-- **Post-Testing Actions for Organizations**
+### モジュール14: レポート作成とテスト後のアクション
+● ペネトレーションテストレポートの概要
+● レポート開発フェーズ
+● レポートコンポーネント
+● ペネトレーションテストレポート分析
+● ペネトレーションテストレポートの提供
+● 組織のためのテスト後アクション
 
-## Skills Developed
-- Advanced penetration testing methodologies and frameworks
-- Network security assessment and exploitation techniques
-- Web application security testing and vulnerability assessment
-- IoT and OT/SCADA security evaluation
-- Cloud security assessment across major platforms (AWS, Azure, GCP)
-- Binary analysis and reverse engineering capabilities
-- Social engineering and physical security testing
-- Wireless network penetration testing
-- Professional reporting and documentation standards
-- Legal and ethical considerations in penetration testing
+## 実習/演習内容
 
-## Key Features
-- Hands-on practical exercises and real-world scenarios
-- Comprehensive coverage of modern penetration testing domains
-- Industry-standard methodologies and frameworks
-- Advanced exploitation techniques and tools
-- Professional report writing and communication skills
-- Preparation for CPENT certification examination
+### 実践的なハンズオン演習
+● 実世界のシナリオベースのペネトレーションテスト演習
+● ライブ環境でのネットワーク侵入テスト
+● Webアプリケーション脆弱性の発見と悪用
+● クラウド環境（AWS、Azure、GCP）でのセキュリティ評価
+● IoTデバイスとOT/SCADAシステムのテスト
+● ソーシャルエンジニアリング演習とフィジカルセキュリティテスト
+● バイナリ解析とリバースエンジニアリング実習
+● 包括的なペネトレーションテストレポート作成演習
+
+### 使用ツールとフレームワーク
+● 業界標準のペネトレーションテストツール
+● カスタムスクリプトと自動化フレームワーク
+● クラウドネイティブセキュリティツール
+● OSINT収集とソーシャルエンジニアリングツール
+● ワイヤレスとIoTペネトレーションテストツール
+
+## コース特徴
+● 実世界のサイバーセキュリティ脅威に基づいた包括的なカリキュラム
+● 複数の環境（ネットワーク、Web、クラウド、IoT、OT）にわたるペネトレーションテスト技術
+● 業界標準の方法論とフレームワークの習得
+● 高度なエクスプロイテーション技術と回避手法
+● プロフェッショナルなレポート作成とコミュニケーションスキル
+● CPENT認定試験への準備
+● 実践的な経験と現実世界での応用
+● 法的・倫理的考慮事項の理解
+
