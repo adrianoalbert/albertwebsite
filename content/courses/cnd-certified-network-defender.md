@@ -8,12 +8,12 @@ end_date: '2024-07-25'
 certificate: 'https://aspen.eccouncil.org/VerifyBadge?type=training&a=YYECWoEp63E3iAbkjW4CJQ=='
 ---
 
-## Course Details
-- **Duration**: 3 days
-- **Start Date**: July 23, 2024
-- **End Date**: July 25, 2024
-- **Level**: Intermediate to Advanced
-- **Course Code**: CND v2
+## コース詳細
+- **期間**: 3日間
+- **開始日**: 2024年7月23日
+- **終了日**: 2024年7月25日
+- **レベル**: 中級〜上級
+- **コースコード**: CND v2
 
 
 ## コース概要	

@@ -9,13 +9,13 @@ certificate: '/images/courses/Cisco DEVASC Certificate.pdf'
 ---
 
 
-## Course Details
-- **Duration**: 5 days
-- **Start Date**: July 1, 2022 
-- **End Date**: July 5, 2022 
-- **Level**: Intermediate
-- **Course Code**: DEVASC
-- **Lab Environment**: Cisco Remote Labs
+## コース詳細
+- **期間**: 5日間
+- **開始日**: 2022年7月1日 
+- **終了日**: 2022年7月5日 
+- **レベル**: 中級
+- **コースコード**: DEVASC
+- **ラボ環境**: Ciscoリモートラボ
 
 ## コース概要
 Ciscoのプラットフォームをベースとして基本的なネットワークアプリケーションを実装する方法と、ネットワーク、セキュリティ、コラボレーション、コンピューティングインフラストラクチャ全体に自動化ワークフローを実装する方法を学びます。このコースでは、Cisco APIと最新の開発ツールを使用して、現実世界の問題を解決する実践的な経験を提供します。

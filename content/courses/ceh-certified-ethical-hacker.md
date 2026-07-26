@@ -8,12 +8,12 @@ end_date: '2024-06-14'
 certificate: 'https://aspen.eccouncil.org/VerifyBadge?type=training&a=X02o8+XW2Xjm6NM/BRRuLA=='
 ---
 
-## Course Details
-- **Duration**: 5 days
-- **Start Date**: June 10, 2024
-- **End Date**: June 14, 2024
-- **Level**: Intermediate to Advanced
-- **Course Code**: CEH v12
+## コース詳細
+- **期間**: 5日間
+- **開始日**: 2024年6月10日
+- **終了日**: 2024年6月14日
+- **レベル**: 中級〜上級
+- **コースコード**: CEH v12
 
 
 ## コース概要	

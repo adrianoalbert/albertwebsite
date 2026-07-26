@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Adriano Albert">
+  <rect width="32" height="32" rx="6" fill="#0A0A0C"/>
+  <text x="16" y="19" text-anchor="middle" font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="15" font-weight="700" fill="#F5F7FA" letter-spacing="-1.2">AA</text>
+  <rect x="9.5" y="23.2" width="13" height="1.8" rx="0.9" fill="#5AA8C4"/>
+</svg>

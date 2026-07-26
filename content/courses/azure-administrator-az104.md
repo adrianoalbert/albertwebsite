@@ -9,12 +9,12 @@ certificate: '/images/courses/Azure Administrator AZ-104 Certificate.pdf'
 ---
 
 
-## Course Details
-- **Duration**: 4 days
-- **Start Date**: July 11, 2023
-- **End Date**: July 14, 2023
-- **Level**: Intermediate to Advanced
-- **Course Code**: AZ-104T00 
+## コース詳細
+- **期間**: 4日間
+- **開始日**: 2023年7月11日
+- **終了日**: 2023年7月14日
+- **レベル**: 中級〜上級
+- **コースコード**: AZ-104T00 
 
 ## コース概要
 このコースでは、Azure サブスクリプションの管理、ID のセキュリティ保護、インフラストラクチャの管理、仮想ネットワークの構成、Azure とオンプレミス サイトの接続、ネットワーク トラフィックの管理、ストレージ ソリューションの実装と作成方法、仮想マシンの拡張、Web アプリとコンテナーの実装、データのバックアップと共有、ソリューションの監視について学びます。

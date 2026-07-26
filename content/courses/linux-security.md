@@ -6,12 +6,12 @@ tags: [Linux, Security, Training]
 certificate: '/images/courses/Linux Security Certificate.pdf'
 ---
 
-## Course Details
-- **Duration**: 2 days
-- **Start Date**: July 21, 2020
-- **End Date**: July 22, 2020
-- **Level**: Intermediate
-- **Lab Environment**: Remote Lab Access
+## コース詳細
+- **期間**: 2日間
+- **開始日**: 2020年7月21日
+- **終了日**: 2020年7月22日
+- **レベル**: 中級
+- **ラボ環境**: リモートラボ
 
 
 ## コース概要

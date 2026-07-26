@@ -9,13 +9,13 @@ certificate: '/images/courses/Python Machine Learning Deep Learning Certificate.
 ---
 
 
-## Course Details
-- **Duration**: 2 days
-- **Start Date**: September 29, 2022
-- **End Date**: September 30, 2022
-- **Level**: Beginner to Intermediate
-- **Format**: Hands-on workshop with practical exercises
-- **Technologies**: Python, scikit-learn, LightGBM, TensorFlow, Keras, PyTorch 
+## コース詳細
+- **期間**: 2日間
+- **開始日**: 2022年9月29日
+- **終了日**: 2022年9月30日
+- **レベル**: 初級〜中級
+- **形式**: ハンズオン形式の実習中心ワークショップ
+- **技術**: Python, scikit-learn, LightGBM, TensorFlow, Keras, PyTorch 
 
 ## コース概要
 機械学習の概要と実装方法を、講義とハンズオン演習で取得します。

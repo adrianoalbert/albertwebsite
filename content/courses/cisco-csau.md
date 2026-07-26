@@ -7,12 +7,12 @@ image: '/images/courses/cisco-csau.png'
 certificate: '/images/courses/Cisco CSAU Certificate.pdf'
 ---
 
-## Course Details
-- **Duration**: 2 days
-- **Start Date**: January 13, 2022
-- **End Date**: January 14, 2022
-- **Level**: Intermediate
-- **Lab Environment**: Cisco Remote Labs
+## コース詳細
+- **期間**: 2日間
+- **開始日**: 2022年1月13日
+- **終了日**: 2022年1月14日
+- **レベル**: 中級
+- **ラボ環境**: Ciscoリモートラボ
 
 
 ## コース概要	

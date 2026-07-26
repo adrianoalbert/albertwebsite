@@ -8,11 +8,11 @@ end_date: '2023-06-09'
 certificate: '/images/courses/Certified Cloud Security Training.pdf'
 ---
 
-## Course Details
-- **Duration**: 4 days
-- **Start Date**: June 6, 2023
-- **End Date**: June 9, 2023
-- **Level**: Intermediate to Advanced
+## コース詳細
+- **期間**: 4日間
+- **開始日**: 2023年6月6日
+- **終了日**: 2023年6月9日
+- **レベル**: 中級〜上級
 
 
 ## コース概要	

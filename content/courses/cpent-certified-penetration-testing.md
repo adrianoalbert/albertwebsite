@@ -8,13 +8,13 @@ end_date: '2025-08-29'
 certificate: 'https://aspen.eccouncil.org/VerifyBadge?type=training&a=oxqD/vlWIQXkKZix2ZnySg=='
 ---
 
-## Course Details
-- **Duration**: 5 days
-- **Start Date**: August 25, 2025
-- **End Date**: August 29, 2025
-- **Level**: Advanced
-- **Provider**: EC-Council
-- **Course Code**: CPENT
+## コース詳細
+- **期間**: 5日間
+- **開始日**: 2025年8月25日
+- **終了日**: 2025年8月29日
+- **レベル**: 上級
+- **提供元**: EC-Council
+- **コースコード**: CPENT
 
 ## コース概要
 CPENT（Certified Penetration Testing Professional）プログラムは、ペネトレーションテストの方法論、ツール、技術の包括的なトレーニングを提供するように設計されています。この上級認定資格は、ネットワーク、Webアプリケーション、IoTデバイス、クラウドプラットフォームなど、さまざまな環境で効果的なペネトレーションテストを実施するために必要な理論的知識と実践的スキルの両方をカバーしています。

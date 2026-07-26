@@ -13,7 +13,7 @@ const HonorsAwardsSection = dynamic(() => import('../components/HonorsAwardsSect
 export default async function About() {
   const fullPath = path.join(process.cwd(), 'content/about/about.md')
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+  const { content } = matter(fileContents)
   const processedContent = await remark()
     .use(html, { sanitize: false })
     .process(content)
@@ -41,13 +41,15 @@ export default async function About() {
           </svg>
           About Me
         </div>
-        <div 
-          className={styles.textContent}
-          style={{
-            fontSize: 'clamp(18px, 2vw, 22px)'
-          }}
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-        />
+        <div className={styles.bioSection}>
+          <div
+            className={styles.textContent}
+            style={{
+              fontSize: 'clamp(18px, 2vw, 22px)'
+            }}
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
+        </div>
         <EducationSection />
         <HonorsAwardsSection />
       </div>

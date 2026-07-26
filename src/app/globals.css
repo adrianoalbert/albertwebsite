@@ -93,6 +93,58 @@ body::before {
   opacity: 0.65;
 }
 
+.course-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.course-header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.course-language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.course-language-option {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.course-language-option:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.course-language-option.active {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.course-language-option:focus-visible {
+  outline: 2px solid rgba(90, 168, 196, 0.9);
+  outline-offset: 2px;
+}
+
 .home-content {
   position: relative;
   z-index: 10;

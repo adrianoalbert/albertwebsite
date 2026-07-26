@@ -8,14 +8,14 @@ end_date: '2022-07-29'
 certificate: '/images/courses/Cisco DEVCOR Certificate.pdf'
 ---
 
-## Course Details
-- **Duration**: 5 days
-- **Start Date**: July 25, 2022
-- **End Date**: July 29, 2022
-- **Level**: Advanced
-- **Prerequisites**: DEVASC completion, 3-5 years of experience
-- **Course Code**: DEVCOR
-- **Lab Environment**: Cisco Remote Labs 
+## コース詳細
+- **期間**: 5日間
+- **開始日**: 2022年7月25日
+- **終了日**: 2022年7月29日
+- **レベル**: 上級
+- **前提条件**: DEVASC修了、3〜5年の経験
+- **コースコード**: DEVCOR
+- **ラボ環境**: Ciscoリモートラボ 
 
 
 ## コース概要

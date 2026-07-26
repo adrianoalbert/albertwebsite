@@ -42,6 +42,11 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
+.bioSection {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
 .textContent {
   font-size: 22px;
   line-height: 1.6;
@@ -49,8 +54,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   padding: 15px;
   border-radius: 8px;
-  max-width: 800px;
-  margin: 0 auto;
+  min-width: 0;
+  margin: 0;
 }
 
 /* Subsection headers */
@@ -117,7 +122,7 @@
     width: 36px;
     height: 36px;
   }
-  
+
   .textContent {
     font-size: 20px;
     line-height: 1.6;
@@ -153,11 +158,12 @@
     width: 32px;
     height: 32px;
   }
-  
+
   .textContent {
     font-size: 20px;
     line-height: 1.7;
     padding: 25px;
+    width: 100%;
   }
   
   .aboutH2 {
@@ -197,7 +203,7 @@
     width: 28px;
     height: 28px;
   }
-  
+
   .textContent {
     font-size: 16px;
     line-height: 1.6;
