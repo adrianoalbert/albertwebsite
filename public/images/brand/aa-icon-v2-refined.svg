@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AA refined mark">
+  <rect width="64" height="64" rx="14" fill="#0A1117"/>
+  <path
+    fill="#F2F5F7"
+    d="M14.5 44 L22.2 18.5 H26.8 L34.5 44 H29.6 L28.1 38.4 H20.9 L19.4 44 H14.5 Z M21.9 34.2 H27.1 L24.5 24.8 Z"
+  />
+  <path
+    fill="#F2F5F7"
+    d="M31.5 44 L39.2 18.5 H43.8 L51.5 44 H46.6 L45.1 38.4 H37.9 L36.4 44 H31.5 Z M38.9 34.2 H44.1 L41.5 24.8 Z"
+  />
+  <rect x="18" y="50" width="28" height="4" rx="2" fill="#5AA8C4"/>
+</svg>

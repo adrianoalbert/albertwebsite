@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans, Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import SiteChrome from "./components/SiteChrome";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Lead IT/OT Systems Engineer | Experienced in Computer Networks Research",
@@ -17,12 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${syne.variable} ${ibmPlexSans.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
-      <body className={inter.className}>
-        {children}
+      <body>
+        <SiteChrome>{children}</SiteChrome>
         <Analytics />
       </body>
     </html>

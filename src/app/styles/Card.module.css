@@ -2,28 +2,20 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-image: url('/bg-tech-2.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background: transparent;
+  color: var(--text, #f2f5f7);
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9));
-}
-
+.overlay,
 .certificationsOverlay {
+  /* Sitewide fixed binary handles atmosphere; keep page overlays light */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  background: transparent;
+  pointer-events: none;
 }
 
 .content {
@@ -37,27 +29,32 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   margin-bottom: 40px;
-  font-size: 48px;
-  font-weight: bold;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   justify-content: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--text, #f2f5f7);
 }
 
 .headerIcon {
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  color: var(--brand, #5aa8c4);
+  flex-shrink: 0;
 }
 
 .textContent {
-  font-size: 26px;
-  line-height: 1.6;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  border-radius: 8px;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-soft, #c5d0d8);
+  background-color: var(--surface, rgba(16, 26, 34, 0.78));
+  border: 1px solid var(--surface-border, rgba(90, 168, 196, 0.2));
+  padding: 28px 32px;
+  border-radius: 12px;
   max-width: 800px;
   margin: 0 auto;
+  backdrop-filter: blur(10px);
 }
 
 .grid {
@@ -98,14 +95,16 @@
 }
 
 .title {
-  font-size: 20px;
-  font-weight: bold;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: 8px;
-  background: linear-gradient(45deg, #fff, #ccc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  line-height: 1.2;
+  color: var(--text, #f2f5f7);
+  background: none;
+  -webkit-text-fill-color: unset;
+  text-align: left;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
 }
 
 .date {
@@ -129,13 +128,13 @@
 }
 
 .tag {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--brand-soft, rgba(90, 168, 196, 0.16));
   padding: 4px 10px;
-  border-radius: 12px;
+  border-radius: 999px;
   font-size: 13px;
   font-weight: 500;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-soft, #c5d0d8);
+  border: 1px solid rgba(90, 168, 196, 0.25);
 }
 
 .imageContainer {
@@ -177,28 +176,40 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background: linear-gradient(135deg, #4a90e2, #357abd);
-  color: white;
+  background: var(--brand, #5aa8c4);
+  color: #0a1117;
   padding: 4px 10px;
   border-radius: 8px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   margin-top: 2px;
   align-self: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 6px rgba(74, 144, 226, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: none;
+  border: 1px solid transparent;
   position: relative;
   overflow: hidden;
   min-width: 80px;
-  backdrop-filter: blur(4px);
 }
 
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(74, 144, 226, 0.3);
-  background: linear-gradient(135deg, #357abd, #2a5f9e);
+  box-shadow: 0 0 0 3px rgba(90, 168, 196, 0.2);
+  background: var(--brand-strong, #3d8eab);
+  color: #0a1117;
+}
+
+.credentialButton {
+  background: transparent;
+  color: var(--brand, #5aa8c4);
+  border: 1px solid rgba(90, 168, 196, 0.55);
+}
+
+.credentialButton:hover {
+  background: var(--brand-soft, rgba(90, 168, 196, 0.16));
+  color: #9fd4e6;
+  box-shadow: none;
 }
 
 .button svg {
@@ -222,12 +233,12 @@
 .timeline::after {
   content: '';
   position: absolute;
-  width: 4px;
-  background: rgba(255, 255, 255, 0.2);
+  width: 2px;
+  background: rgba(90, 168, 196, 0.35);
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -2px;
+  margin-left: -1px;
 }
 
 .timelineItem {
@@ -247,11 +258,12 @@
 
 .timelineDot {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 15px;
-  background-color: #4CAF50;
-  border: 4px solid rgba(255, 255, 255, 0.2);
+  width: 14px;
+  height: 14px;
+  top: 18px;
+  background-color: var(--brand, #5aa8c4);
+  border: 3px solid rgba(10, 17, 23, 0.9);
+  box-shadow: 0 0 0 2px rgba(90, 168, 196, 0.45);
   border-radius: 50%;
   z-index: 1;
 }
@@ -298,9 +310,10 @@
 
 .timelineContent {
   padding: 15px;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--surface, rgba(16, 26, 34, 0.78));
+  border: 1px solid var(--surface-border, rgba(90, 168, 196, 0.2));
   position: relative;
-  border-radius: 8px;
+  border-radius: 12px;
   backdrop-filter: blur(10px);
   min-height: 120px;
   display: flex;
@@ -309,18 +322,18 @@
 }
 
 .timelineDate {
-  font-size: 24px;
-  background: linear-gradient(45deg, #6b7280, #9ca3af, #d1d5db, #e5e7eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-size: 1.125rem;
+  color: var(--brand, #5aa8c4);
+  -webkit-text-fill-color: unset;
+  background: none;
   margin-bottom: 2px;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .timelineCard {
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
   border-radius: 8px;
   padding: 15px;
   min-height: 100px;
@@ -723,17 +736,18 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(76, 175, 80, 0.8);
-  color: white;
+  background: var(--brand, #5aa8c4);
+  color: #0a1117;
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
   margin-top: 15px;
 }
 
 .certButton:hover {
-  background: rgba(76, 175, 80, 1);
+  background: var(--brand-strong, #3d8eab);
 }
 
 @media screen and (max-width: 768px) {
@@ -847,7 +861,7 @@
 }
 
 .certDate {
-  color: #4CAF50;
+  color: var(--brand, #5aa8c4);
   font-size: 0.9rem;
 }
 
@@ -877,18 +891,19 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(76, 175, 80, 0.8);
-  color: white;
+  background: var(--brand, #5aa8c4);
+  color: #0a1117;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.25s ease;
   margin-top: 10px;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .certButton:hover {
-  background: rgba(76, 175, 80, 1);
+  background: var(--brand-strong, #3d8eab);
 }
 
 @media screen and (max-width: 768px) {
@@ -937,56 +952,53 @@
 }
 
 .certificationsTableWrapper {
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--surface, rgba(16, 26, 34, 0.78));
+  border: 1px solid var(--surface-border, rgba(90, 168, 196, 0.2));
+  border-radius: 12px;
+  overflow: hidden;
   min-width: 100%;
   position: relative;
+  backdrop-filter: blur(10px);
 }
 
 .certificationsTableWrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  right: -100%;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-  pointer-events: none;
+  display: none;
 }
 
 .certTable {
   width: 100%;
   border-collapse: collapse;
-  color: #e2e8f0;
+  color: var(--text-soft, #c5d0d8);
 }
 
 .certTable th {
-  background: #2d3748;
+  background: rgba(21, 32, 41, 0.95);
   padding: 16px;
   text-align: left;
+  font-family: var(--font-display), "Syne", sans-serif;
   font-weight: 600;
-  color: #a0aec0;
-  border-bottom: 2px solid #4a5568;
-  font-size: 0.95rem;
+  color: var(--text-muted, #a8b4be);
+  border-bottom: 1px solid var(--surface-border, rgba(90, 168, 196, 0.2));
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .certTable td {
   padding: 16px;
-  border-bottom: 1px solid #2d3748;
+  border-bottom: 1px solid rgba(90, 168, 196, 0.12);
   vertical-align: top;
   text-align: left;
 }
 
 .certRow {
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .certRow:hover {
-  background: #2d3748;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(90, 168, 196, 0.08);
+  transform: none;
+  box-shadow: none;
 }
 
 .certInfo {
@@ -1010,13 +1022,13 @@
 }
 
 .skill {
-  background: #2c5282;
-  color: #90cdf4;
+  background: var(--brand-soft, rgba(90, 168, 196, 0.16));
+  color: var(--text-soft, #c5d0d8);
   padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid #4299e1;
+  border: 1px solid rgba(90, 168, 196, 0.28);
 }
 
 .dateInfo {
@@ -1024,27 +1036,27 @@
   flex-direction: column;
   gap: 4px;
   font-size: 0.9rem;
-  color: #a0aec0;
+  color: var(--text-muted, #a8b4be);
 }
 
 .status {
   display: inline-block;
   padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .status.active {
-  background: #22543d;
-  color: #9ae6b4;
-  border: 1px solid #48bb78;
+  background: rgba(90, 168, 196, 0.16);
+  color: #9fd4e6;
+  border: 1px solid rgba(90, 168, 196, 0.4);
 }
 
 .status.permanent {
-  background: #2c5282;
-  color: #90cdf4;
-  border: 1px solid #4299e1;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-soft, #c5d0d8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .certButton {
@@ -1052,20 +1064,20 @@
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  background: #4299e1;
-  color: #f7fafc;
-  border-radius: 6px;
+  background: var(--brand, #5aa8c4);
+  color: #0a1117;
+  border-radius: 8px;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  border: 1px solid #3182ce;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+  border: 1px solid transparent;
 }
 
 .certButton:hover {
-  background: #3182ce;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: var(--brand-strong, #3d8eab);
+  transform: none;
+  box-shadow: 0 0 0 3px rgba(90, 168, 196, 0.18);
 }
 
 @media (max-width: 768px) {
@@ -1376,12 +1388,37 @@
 .issuer {
   display: inline-block;
   padding: 4px 12px;
-  background: #2d3748;
-  color: #90cdf4;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-soft, #c5d0d8);
   border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 500;
-  border: 1px solid #4a5568;
+  border: 1px solid rgba(90, 168, 196, 0.22);
+}
+
+.projectsEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+  gap: 12px;
+}
+
+.projectsEmpty h2 {
+  margin: 0;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--brand, #5aa8c4);
+}
+
+.projectsEmpty p {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--text-soft, #c5d0d8);
 }
 
 .certTableHeader {

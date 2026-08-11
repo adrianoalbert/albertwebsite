@@ -30,7 +30,7 @@ const awardsData = [
 export default function HonorsAwardsSection() {
   return (
     <section className={styles.honorsSection}>
-      <h2 className={styles.header}>🏆 Honors and Awards</h2>
+      <h2 className={styles.header}>Honors and Awards</h2>
       <div className={styles.awardsList}>
         {awardsData.map((award, idx) => (
           <div className={styles.card} key={idx}>

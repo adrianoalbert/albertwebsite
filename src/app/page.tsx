@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiX } from "react-icons/si";
@@ -6,19 +7,29 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="home-overlay"></div>
-      
+
       <div className="home-content">
+        <Image
+          src="/images/brand/aa-icon-v1-geometric.svg"
+          alt="AA"
+          width={72}
+          height={72}
+          className="brand-mark"
+          priority
+        />
+        <div className="brand-mark-accent" aria-hidden="true" />
         <h1>Adriano Albert Muniz, Ph.D.</h1>
-        <div className="subtitle">Lead IT/OT Systems Engineer | Experienced in Computer Networks Research</div>
-        <nav className="main-nav">
+        <p className="subtitle">
+          Lead IT/OT Systems Engineer |{" "}
+          <span className="subtitle-phrase">Experienced in Computer Networks Research</span>
+        </p>
+        <nav className="main-nav" aria-label="Primary">
           <Link href="/about">About</Link>
           <Link href="/certifications">Certifications</Link>
           <Link href="/courses">Courses</Link>
           <Link href="/publications">Publications</Link>
-          <Link href="/projects">Projects</Link>
         </nav>
-        <div className="nav-spacer"></div>
-        
+
         <div className="social-icons">
           <a href="https://x.com/adrianoalbert" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <SiX className="social-icon" />

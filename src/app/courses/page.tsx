@@ -32,13 +32,7 @@ export default async function CoursesPage({
 
   return (
     <div className={styles.container}>
-      <div
-        className={styles.overlay}
-        style={{
-          background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.85))',
-        }}
-      ></div>
+      <div className={styles.overlay} aria-hidden="true"></div>
       <div className={styles.content}>
         <div className={styles.header}>
           <div className="course-header-row">
@@ -119,8 +113,7 @@ export default async function CoursesPage({
                         href={course.certificate}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.button}
-                        style={{ backgroundColor: 'rgba(76, 175, 80, 0.8)' }}
+                        className={`${styles.button} ${styles.credentialButton}`}
                       >
                         {t.showCredentials}
                         <svg

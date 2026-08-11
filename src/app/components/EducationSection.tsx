@@ -1,5 +1,4 @@
 import styles from '../styles/EducationSection.module.css';
-import Image from 'next/image';
 
 const educationData = [
   {
@@ -42,12 +41,13 @@ const educationData = [
 export default function EducationSection() {
   return (
     <section className={styles.educationSection}>
-      <h2 className={styles.header}>🎓 Education</h2>
+      <h2 className={styles.header}>Education</h2>
       <div className={styles.educationList}>
         {educationData.map((edu, idx) => (
           <div className={styles.card} key={idx}>
             <div className={styles.logoWrap}>
-              <Image src={edu.logo} alt={edu.institution} width={60} height={60} className={styles.logo} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={edu.logo} alt={`${edu.institution} logo`} className={styles.logo} />
             </div>
             <div className={styles.eduContent}>
               <div className={styles.institution}>{edu.institution}</div>
@@ -60,4 +60,4 @@ export default function EducationSection() {
       </div>
     </section>
   );
-} 
+}

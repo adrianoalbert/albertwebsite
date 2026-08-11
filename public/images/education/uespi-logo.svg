@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Vetorizado por Cleberson Carlos (http://clebersonc.blogspot.com) -->
 
-<svg
+<svg preserveAspectRatio="xMidYMid meet"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="835.61194"
-   height="1292.951"
+  
+  
    viewBox="0 0 668.48958 1034.3609"
    version="1.1"
    id="svg2"
