@@ -587,15 +587,37 @@ body > * {
   max-width: min(42rem, 100%);
   line-height: 1.55;
   animation: rise-in 0.75s 0.16s ease both;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-.subtitle-phrase {
-  white-space: nowrap;
+.subtitle-line,
+.subtitle-sep {
+  font-size: inherit !important;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
-@media (max-width: 420px) {
-  .subtitle-phrase {
+@media (max-width: 640px) {
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    font-size: 1.0625rem !important;
+  }
+
+  .subtitle-sep {
+    display: none;
+  }
+
+  .subtitle-line {
+    display: block;
+    width: 100%;
+    text-align: center;
     white-space: normal;
+    font-size: inherit !important;
   }
 }
 
@@ -1081,7 +1103,11 @@ h3 {
     box-sizing: border-box;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-size: 18px !important;
+    font-size: 1.0625rem !important;
+  }
+
+  .subtitle-line {
+    font-size: inherit !important;
   }
   
   .main-nav a {
@@ -1277,7 +1303,11 @@ h3 {
     box-sizing: border-box;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-size: 18px !important;
+    font-size: 1.0625rem !important;
+  }
+
+  .subtitle-line {
+    font-size: inherit !important;
   }
   
   .main-nav a {

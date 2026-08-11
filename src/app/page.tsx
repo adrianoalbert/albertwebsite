@@ -20,8 +20,12 @@ export default function Home() {
         <div className="brand-mark-accent" aria-hidden="true" />
         <h1>Adriano Albert Muniz, Ph.D.</h1>
         <p className="subtitle">
-          Lead IT/OT Systems Engineer |{" "}
-          <span className="subtitle-phrase">Experienced in Computer Networks Research</span>
+          <span className="subtitle-line">Lead IT/OT Systems Engineer</span>
+          <span className="subtitle-sep" aria-hidden="true">
+            {" "}
+            |{" "}
+          </span>
+          <span className="subtitle-line">Experienced in Computer Networks Research</span>
         </p>
         <nav className="main-nav" aria-label="Primary">
           <Link href="/about">About</Link>
