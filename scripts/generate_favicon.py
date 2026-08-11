@@ -1,81 +1,68 @@
-"""Generate Adriano Albert (AA) personal favicon and brand icons."""
+"""Generate Adriano Albert (AA) favicon and brand icons from the geometric mark."""
 from __future__ import annotations
 
 import struct
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
 
-BG = (10, 10, 12, 255)
-FG = (245, 247, 250, 255)
-ACCENT = (90, 168, 196, 255)
+# Match public/images/brand/aa-icon-v1-geometric.svg
+BG = (10, 17, 23, 255)  # #0A1117
+FG = (242, 245, 247, 255)  # #F2F5F7
+FG_SECOND = (242, 245, 247, 235)  # ~0.92 opacity
+ACCENT = (90, 168, 196, 255)  # #5AA8C4
+VIEW = 64.0
 
-FONT_CANDIDATES = [
-    Path(r"C:\Windows\Fonts\segoeuib.ttf"),
-    Path(r"C:\Windows\Fonts\arialbd.ttf"),
-    Path(r"C:\Windows\Fonts\verdanab.ttf"),
-]
-
-
-def load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    for path in FONT_CANDIDATES:
-        if path.exists():
-            return ImageFont.truetype(str(path), size=size)
-    return ImageFont.load_default()
+GEOMETRIC_SVG = (ROOT / "public" / "images" / "brand" / "aa-icon-v1-geometric.svg").read_text(
+    encoding="utf-8"
+)
 
 
-def rounded_bg(size: int) -> Image.Image:
-    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+def scale_pt(x: float, y: float, size: int) -> tuple[float, float]:
+    return x / VIEW * size, y / VIEW * size
+
+
+def stroke_round_polyline(
+    draw: ImageDraw.ImageDraw,
+    points: list[tuple[float, float]],
+    *,
+    fill: tuple[int, int, int, int],
+    width: int,
+) -> None:
+    if len(points) < 2:
+        return
+    draw.line(points, fill=fill, width=width, joint="curve")
+    r = width / 2
+    for x, y in points:
+        draw.ellipse((x - r, y - r, x + r, y + r), fill=fill)
+
+
+def draw_geometric_aa(size: int) -> Image.Image:
+    """Rasterize the overlapping geometric AA mark for favicon sizes."""
+    render = max(size * 4, 128)
+    img = Image.new("RGBA", (render, render), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
-    radius = max(2, round(size * 0.18))
-    draw.rounded_rectangle([0, 0, size - 1, size - 1], radius=radius, fill=BG)
-    return img
 
+    radius = max(2, round(14 / VIEW * render))
+    draw.rounded_rectangle([0, 0, render - 1, render - 1], radius=radius, fill=BG)
 
-def draw_aa_monogram(size: int) -> Image.Image:
-    """Readable AA monogram tuned for favicon sizes."""
-    img = rounded_bg(size)
-    draw = ImageDraw.Draw(img)
+    stroke_a = max(2, round(5.5 / VIEW * render))
+    stroke_bar = max(2, round(4 / VIEW * render))
 
-    font_size = max(8, int(size * 0.58))
-    font = load_font(font_size)
-    tracking = -size * 0.04
+    a1 = [scale_pt(18, 46, render), scale_pt(28, 14, render), scale_pt(38, 46, render)]
+    bar1 = [scale_pt(22.5, 34, render), scale_pt(33.5, 34, render)]
+    a2 = [scale_pt(30, 46, render), scale_pt(40, 14, render), scale_pt(50, 46, render)]
+    bar2 = [scale_pt(34.5, 34, render), scale_pt(45.5, 34, render)]
 
-    def measure(f: ImageFont.ImageFont) -> tuple[float, float, float, float, float, float]:
-        b1 = draw.textbbox((0, 0), "A", font=f)
-        w1 = b1[2] - b1[0]
-        h = b1[3] - b1[1]
-        total_w = w1 + w1 + tracking
-        return w1, w1, h, total_w, b1[0], b1[1]
+    stroke_round_polyline(draw, a1, fill=FG, width=stroke_a)
+    stroke_round_polyline(draw, bar1, fill=ACCENT, width=stroke_bar)
+    stroke_round_polyline(draw, a2, fill=FG_SECOND, width=stroke_a)
+    stroke_round_polyline(draw, bar2, fill=ACCENT, width=stroke_bar)
 
-    pad = size * 0.10
-    for _ in range(16):
-        w1, w2, h, total_w, ox, oy = measure(font)
-        if total_w <= size - 2 * pad and h <= size * 0.68:
-            break
-        font_size = max(6, font_size - 1)
-        font = load_font(font_size)
-
-    w1, w2, h, total_w, ox, oy = measure(font)
-    start_x = (size - total_w) / 2 - ox
-    start_y = (size - h) / 2 - oy - size * 0.06
-
-    draw.text((start_x, start_y), "A", font=font, fill=FG)
-    draw.text((start_x + w1 + tracking, start_y), "A", font=font, fill=FG)
-
-    bar_w = max(total_w * 0.62, size * 0.30)
-    bar_h = max(1, round(size * 0.06))
-    bar_y = start_y + oy + h + size * 0.07
-    max_y = size - size * 0.10
-    if bar_y + bar_h > max_y:
-        bar_y = max_y - bar_h
-    draw.rounded_rectangle(
-        [(size - bar_w) / 2, bar_y, (size + bar_w) / 2, bar_y + bar_h],
-        radius=max(1, bar_h // 2),
-        fill=ACCENT,
-    )
+    if render != size:
+        img = img.resize((size, size), Image.Resampling.LANCZOS)
     return img
 
 
@@ -114,30 +101,21 @@ def write_ico(path: Path, images: list[Image.Image]) -> None:
     path.write_bytes(header + entries + payload)
 
 
-SVG = """<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Adriano Albert">
-  <rect width="32" height="32" rx="6" fill="#0A0A0C"/>
-  <text x="16" y="19" text-anchor="middle" font-family="Segoe UI, Arial, Helvetica, sans-serif"
-        font-size="15" font-weight="700" fill="#F5F7FA" letter-spacing="-1.2">AA</text>
-  <rect x="9.5" y="23.2" width="13" height="1.8" rx="0.9" fill="#5AA8C4"/>
-</svg>
-"""
-
-
 def main() -> None:
     brand_dir = ROOT / "public" / "images" / "brand"
     brand_dir.mkdir(parents=True, exist_ok=True)
-
-    master = draw_aa_monogram(512)
-    master.save(brand_dir / "aa-icon.png")
-    (brand_dir / "aa-icon.svg").write_text(SVG, encoding="utf-8")
-
     app_dir = ROOT / "src" / "app"
-    draw_aa_monogram(32).save(app_dir / "icon.png")
-    draw_aa_monogram(180).save(app_dir / "apple-icon.png")
+
+    master = draw_geometric_aa(512)
+    master.save(brand_dir / "aa-icon.png")
+    (brand_dir / "aa-icon.svg").write_text(GEOMETRIC_SVG, encoding="utf-8")
+    (app_dir / "icon.svg").write_text(GEOMETRIC_SVG, encoding="utf-8")
+
+    draw_geometric_aa(32).save(app_dir / "icon.png")
+    draw_geometric_aa(180).save(app_dir / "apple-icon.png")
 
     sizes = [16, 32, 48]
-    ico_images = [draw_aa_monogram(sz) for sz in sizes]
+    ico_images = [draw_geometric_aa(sz) for sz in sizes]
     ico_path = app_dir / "favicon.ico"
     write_ico(ico_path, ico_images)
 
@@ -154,6 +132,7 @@ def main() -> None:
 
     print(f"Wrote {brand_dir / 'aa-icon.png'}")
     print(f"Wrote {brand_dir / 'aa-icon.svg'}")
+    print(f"Wrote {app_dir / 'icon.svg'}")
     print(f"Wrote {app_dir / 'icon.png'}")
     print(f"Wrote {app_dir / 'apple-icon.png'}")
     print(f"Wrote {ico_path} ({ico_path.stat().st_size} bytes, frames={frames})")
