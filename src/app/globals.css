@@ -579,45 +579,35 @@ body > * {
 }
 
 .subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
   font-family: var(--font-body), "IBM Plex Sans", sans-serif;
   font-size: clamp(1rem, 2vw, 1.25rem) !important;
   font-weight: 400;
   color: var(--text-soft);
   margin: 0 0 clamp(40px, 6vh, 56px);
   max-width: min(42rem, 100%);
-  line-height: 1.55;
+  line-height: 1.45;
   animation: rise-in 0.75s 0.16s ease both;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-.subtitle-line,
-.subtitle-sep {
+.subtitle-line {
+  display: block;
   font-size: inherit !important;
   font-weight: inherit;
   line-height: inherit;
   color: inherit;
+  white-space: nowrap;
 }
 
-@media (max-width: 640px) {
-  .subtitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2em;
-    font-size: 1.0625rem !important;
-  }
-
-  .subtitle-sep {
-    display: none;
-  }
-
+@media (max-width: 380px) {
   .subtitle-line {
-    display: block;
-    width: 100%;
-    text-align: center;
     white-space: normal;
-    font-size: inherit !important;
+    text-align: center;
   }
 }
 
@@ -1105,10 +1095,6 @@ h3 {
     overflow-wrap: break-word;
     font-size: 1.0625rem !important;
   }
-
-  .subtitle-line {
-    font-size: inherit !important;
-  }
   
   .main-nav a {
     font-size: 22px !important;
@@ -1304,10 +1290,6 @@ h3 {
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 1.0625rem !important;
-  }
-
-  .subtitle-line {
-    font-size: inherit !important;
   }
   
   .main-nav a {
