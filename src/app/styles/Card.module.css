@@ -24,6 +24,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
+  min-width: 0;
+  overflow-x: visible;
 }
 
 .header {
@@ -943,6 +945,8 @@
 /* Table Layout Styles */
 .tableContainer {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   padding: 20px;
@@ -955,10 +959,15 @@
   background: var(--surface, rgba(16, 26, 34, 0.78));
   border: 1px solid var(--surface-border, rgba(90, 168, 196, 0.2));
   border-radius: 12px;
-  overflow: hidden;
-  min-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  min-width: 0;
+  max-width: 100%;
   position: relative;
   backdrop-filter: blur(10px);
+  touch-action: pan-x pan-y;
 }
 
 .certificationsTableWrapper::before {
@@ -967,6 +976,7 @@
 
 .certTable {
   width: 100%;
+  min-width: 720px;
   border-collapse: collapse;
   color: var(--text-soft, #c5d0d8);
 }
@@ -1081,9 +1091,16 @@
 }
 
 @media (max-width: 768px) {
-  .tableContainer {
-    margin: 0 -16px;
-    border-radius: 0;
+  .tableContainer,
+  .certificationsTableWrapper {
+    margin: 0;
+    border-radius: 12px;
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .certTable {
+    min-width: 640px;
   }
 
   .certTable th,
