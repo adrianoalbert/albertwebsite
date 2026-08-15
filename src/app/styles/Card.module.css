@@ -378,7 +378,7 @@
 
 .timelineDate {
   font-family: var(--font-display), "Syne", sans-serif;
-  font-size: 0.9rem;
+  font-size: 18px;
   color: var(--brand, #5aa8c4);
   -webkit-text-fill-color: unset;
   background: none;
@@ -441,7 +441,7 @@
     top: auto !important;
     width: auto !important;
     margin-bottom: 8px;
-    font-size: 0.875rem !important;
+    font-size: 18px !important;
   }
   
   .timelineItem:nth-child(even) .timelineDate {
@@ -454,7 +454,7 @@
     top: auto !important;
     width: auto !important;
     margin-bottom: 8px;
-    font-size: 0.875rem !important;
+    font-size: 18px !important;
   }
   
   .timelineContent {
@@ -1341,7 +1341,7 @@
 }
 
 .timelineDate {
-  font-size: 0.9rem;
+  font-size: 18px;
   background: none;
   -webkit-text-fill-color: unset;
   color: var(--brand, #5aa8c4);
