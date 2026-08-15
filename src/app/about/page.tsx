@@ -6,10 +6,8 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import styles from '../styles/About.module.css'
 import cardStyles from '../styles/Card.module.css'
-import dynamic from 'next/dynamic'
-
-const EducationSection = dynamic(() => import('../components/EducationSection'), { ssr: false })
-const HonorsAwardsSection = dynamic(() => import('../components/HonorsAwardsSection'), { ssr: false })
+import EducationSection from '../components/EducationSection'
+import HonorsAwardsSection from '../components/HonorsAwardsSection'
 
 export const metadata: Metadata = {
   title: 'About',
