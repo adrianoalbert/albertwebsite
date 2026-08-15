@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import type { Metadata } from 'next'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
@@ -9,6 +10,12 @@ import dynamic from 'next/dynamic'
 
 const EducationSection = dynamic(() => import('../components/EducationSection'), { ssr: false })
 const HonorsAwardsSection = dynamic(() => import('../components/HonorsAwardsSection'), { ssr: false })
+
+export const metadata: Metadata = {
+  title: 'About',
+  description:
+    'Background, education, and honors for Adriano Albert Muniz, Ph.D. — Lead IT/OT Systems Engineer.',
+}
 
 export default async function About() {
   const fullPath = path.join(process.cwd(), 'content/about/about.md')

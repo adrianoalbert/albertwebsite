@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import { getContentByType } from '@/lib/markdown'
@@ -11,6 +12,12 @@ import {
 } from '../i18n/courses'
 
 type SearchParams = { lang?: string | string[] }
+
+export const metadata: Metadata = {
+  title: 'Courses',
+  description:
+    'Professional training courses in cybersecurity, cloud, networking, and automation — available in English and Japanese.',
+}
 
 export const dynamic = 'force-dynamic'
 

@@ -17,10 +17,29 @@ const ibmPlexSans = IBM_Plex_Sans({
   display: "swap",
 });
 
+const siteDescription =
+  "Portfolio of Adriano Albert Muniz, Ph.D. — Lead IT/OT Systems Engineer specializing in cybersecurity, computer networks research, and industrial automation.";
+
 export const metadata: Metadata = {
-  title: "Lead IT/OT Systems Engineer | Experienced in Computer Networks Research",
-  description: "Professional portfolio and blog of a Lead IT/OT Systems Engineer with expertise in computer networks research, cybersecurity, and industrial automation.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  metadataBase: new URL("https://www.adrianoalbert.com"),
+  title: {
+    default: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
+    template: "%s | Adriano Albert Muniz",
+  },
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.adrianoalbert.com",
+    siteName: "Adriano Albert Muniz",
+    title: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary",
+    title: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({
@@ -30,9 +49,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${ibmPlexSans.variable}`}>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-      </head>
       <body>
         <SiteChrome>{children}</SiteChrome>
         <Analytics />

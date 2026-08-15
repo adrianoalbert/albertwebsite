@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiX } from "react-icons/si";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
+  },
+  description:
+    "Lead IT/OT Systems Engineer with a Ph.D. in computer networks — cybersecurity, industrial automation, and professional training.",
+};
 
 export default function Home() {
   return (

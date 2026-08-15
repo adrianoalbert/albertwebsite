@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
 import { getContentByType } from '@/lib/markdown'
 import styles from '../styles/Card.module.css'
-import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Certifications',
+  description:
+    'Professional certifications including EC-Council, Microsoft Azure, Cisco, and related cybersecurity credentials.',
+}
 
 // Helper function to format dates consistently
 const formatDate = (dateString: string) => {

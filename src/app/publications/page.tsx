@@ -1,5 +1,12 @@
+import type { Metadata } from 'next'
 import { getContentByType } from '@/lib/markdown'
 import styles from '../styles/Card.module.css'
+
+export const metadata: Metadata = {
+  title: 'Publications',
+  description:
+    'Academic publications and research papers by Adriano Albert Muniz in computer networks and related fields.',
+}
 
 export default async function PublicationsPage() {
   const publications = await getContentByType('publications')

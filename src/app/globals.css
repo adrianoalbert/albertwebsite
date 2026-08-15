@@ -534,6 +534,98 @@ body > * {
   color: var(--brand);
 }
 
+.not-found-page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: min(70vh, 640px);
+  padding: clamp(32px, 6vh, 64px) 24px;
+  max-width: 520px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.not-found-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.not-found-code {
+  margin: 0 0 8px;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--brand, #5aa8c4);
+  line-height: 1;
+}
+
+.not-found-title {
+  margin: 0 0 12px;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text, #f2f5f7);
+}
+
+.not-found-copy {
+  margin: 0 0 28px;
+  color: var(--text-muted, #a8b4be);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.not-found-primary,
+.not-found-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.not-found-primary {
+  background: var(--brand, #5aa8c4);
+  color: #0a1117;
+  border: 1px solid var(--brand, #5aa8c4);
+}
+
+.not-found-primary:hover {
+  background: var(--brand-strong, #3d8eab);
+  border-color: var(--brand-strong, #3d8eab);
+}
+
+.not-found-secondary {
+  background: transparent;
+  color: var(--text-soft, #c5d0d8);
+  border: 1px solid var(--surface-border, rgba(90, 168, 196, 0.35));
+}
+
+.not-found-secondary:hover {
+  color: var(--brand, #5aa8c4);
+  border-color: var(--brand, #5aa8c4);
+}
+
 .home-content {
   position: relative;
   z-index: 3;

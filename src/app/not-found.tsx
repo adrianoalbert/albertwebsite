@@ -1,26 +1,40 @@
+import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Page not found',
+  description: 'The page you requested could not be found.',
+  robots: { index: false, follow: false },
+}
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-lg">
-        <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold text-gray-900">
-            404 - Page Not Found
-          </h2>
-          <p className="mt-2 text-sm text-gray-600">
-            Sorry, we couldn&apos;t find the page you&apos;re looking for.
-          </p>
-        </div>
-        <div className="mt-8">
-          <Link
-            href="/"
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            Return to Home
-          </Link>
-        </div>
+    <div className="not-found-page">
+      <Image
+        src="/images/brand/aa-icon-v1-geometric.svg"
+        alt=""
+        width={56}
+        height={56}
+        className="not-found-mark"
+        priority
+      />
+      <p className="not-found-code">404</p>
+      <h1 className="not-found-title">Page not found</h1>
+      <p className="not-found-copy">
+        That URL doesn&apos;t match anything on this site. Try one of these instead.
+      </p>
+      <div className="not-found-actions">
+        <Link href="/" className="not-found-primary">
+          Home
+        </Link>
+        <Link href="/courses" className="not-found-secondary">
+          Courses
+        </Link>
+        <Link href="/about" className="not-found-secondary">
+          About
+        </Link>
       </div>
     </div>
   )
-} 
+}

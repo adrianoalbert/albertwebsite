@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import { getContentByType, getContentBySlug } from '@/lib/markdown'
@@ -19,6 +20,28 @@ export async function generateStaticParams() {
   return courses.map((course) => ({
     slug: course.slug,
   }))
+}
+
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: { slug: string } | Promise<{ slug: string }>
+  searchParams?: SearchParams | Promise<SearchParams>
+}): Promise<Metadata> {
+  const { slug } = await Promise.resolve(params)
+  const resolvedSearchParams = await Promise.resolve(searchParams ?? {})
+  const locale = parseCourseLocale(resolvedSearchParams.lang)
+  const course = await getContentBySlug('courses', slug, locale)
+
+  if (!course) {
+    return { title: 'Course not found' }
+  }
+
+  return {
+    title: course.title,
+    description: `${course.title} — course details, modules, and learning outcomes.`,
+  }
 }
 
 export default async function CoursePage({
