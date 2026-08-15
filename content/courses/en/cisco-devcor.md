@@ -29,18 +29,29 @@ Upon completing this course, you will be able to explain:
 - Comparisons and requirements of relational and non-relational databases
 
 ## Course Modules
-- Design for maintainability (*self-study)
-- Design for serviceability (*self-study)
-- Implementing ChatOps applications
-- Advanced REST API integration
-- Protecting application data (*self-study)
-- Protecting web and mobile applications (*self-study)
-- Automating application releases
-- Application deployment
-- Distributed systems
-- Network and infrastructure orchestration
-- YANG data modeling
-- Using relational and non-relational databases (*self-study)
+#### Module 01: Design for maintainability (*self-study)
+
+#### Module 02: Design for serviceability (*self-study)
+
+#### Module 03: Implementing ChatOps applications
+
+#### Module 04: Advanced REST API integration
+
+#### Module 05: Protecting application data (*self-study)
+
+#### Module 06: Protecting web and mobile applications (*self-study)
+
+#### Module 07: Automating application releases
+
+#### Module 08: Application deployment
+
+#### Module 09: Distributed systems
+
+#### Module 10: Network and infrastructure orchestration
+
+#### Module 11: YANG data modeling
+
+#### Module 12: Using relational and non-relational databases (*self-study)
 
 **Sections marked (*self-study) are independent learning materials.**  
 The instructor does not cover self-study sections during class. Continue learning on your own after the course.

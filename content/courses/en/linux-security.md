@@ -17,61 +17,61 @@ This course covers the standard security features of Linux systems and how to co
 - Understand the importance of information security and identify threats to information assets
 
 ## Course Modules
-1. Security Overview
-   - What is information security
-   - Information assets
-   - Threats
-   - Physical threats
-   - Human threats
-   - Technical threats
-   - Organizational security measures
+#### Module 01: Security Overview
+- What is information security
+- Information assets
+- Threats
+- Physical threats
+- Human threats
+- Technical threats
+- Organizational security measures
 
-2. Types of Attacks
-   - Attack flow
-   - Attack types
-   - Footprinting
-   - Target scanning
-   - Vulnerable protocols
-   - Sniffing
-   - Password cracking
-   - Spoofing
-   - Exploiting security holes
-   - Malware
-   - DoS attacks
+#### Module 02: Types of Attacks
+- Attack flow
+- Attack types
+- Footprinting
+- Target scanning
+- Vulnerable protocols
+- Sniffing
+- Password cracking
+- Spoofing
+- Exploiting security holes
+- Malware
+- DoS attacks
 
-3. Account Security
-   - Account security overview
-   - Password management
-   - Login status management
-   - Login restrictions
-   - File permissions
-   - Special permissions
+#### Module 03: Account Security
+- Account security overview
+- Password management
+- Login status management
+- Login restrictions
+- File permissions
+- Special permissions
 
-4. Tripwire
-   - Using integrity checking tools
-   - Tripwire integrity check flow
-   - Tripwire-related files
-   - Creating signed files
-   - Creating the database
-   - Checking system data integrity
-   - Updating the database
-   - Updating the policy file
+#### Module 04: Tripwire
+- Using integrity checking tools
+- Tripwire integrity check flow
+- Tripwire-related files
+- Creating signed files
+- Creating the database
+- Checking system data integrity
+- Updating the database
+- Updating the policy file
 
-5. SELinux
-   - SELinux overview
-   - How SELinux works
-   - Enabling SELinux
-   - TE (Type Enforcement)
-   - Security context
-   - SELinux configuration files
-   - SELinux troubleshooting
-   - Adjusting SELinux scope
-   - Adjusting boolean parameters
-   - Relabeling file types
+#### Module 05: SELinux
+- SELinux overview
+- How SELinux works
+- Enabling SELinux
+- TE (Type Enforcement)
+- Security context
+- SELinux configuration files
+- SELinux troubleshooting
+- Adjusting SELinux scope
+- Adjusting boolean parameters
+- Relabeling file types
 
-6. firewalld
-   - Firewall overview
-   - firewalld overview
-   - Checking firewalld configuration
-   - Configuring zone rules
-   - Assigning interfaces
+#### Module 06: firewalld
+- Firewall overview
+- firewalld overview
+- Checking firewalld configuration
+- Configuring zone rules
+- Assigning interfaces

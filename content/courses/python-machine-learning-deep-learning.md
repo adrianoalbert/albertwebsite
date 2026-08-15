@@ -31,25 +31,24 @@ certificate: '/images/courses/Python Machine Learning Deep Learning Certificate.
 ● Tensorflow/Kerasを用いて画像分類モデルを実装できる
 
 ## 学習内容
-
-### 1. 機械学習の概要
+#### モジュール01: 機械学習の概要
 - 機械学習の概要
 - 機械学習を利用・構築するためのプロセス
 - 機械学習開発の環境
 
-### 2. 線形回帰 – scikit-learn -
+#### モジュール02: 線形回帰 – scikit-learn -
 - 線形回帰
 - 線形回帰モデルの実装
 - 特徴量選択による線形回帰モデルの改良
 - 演習：線形回帰
 
-### 3. ロジスティック回帰 – scikit-learn -
+#### モジュール03: ロジスティック回帰 – scikit-learn -
 - ロジスティック回帰
 - ロジスティック回帰の実装
 - 標準化によるロジスティック回帰モデルの改良
 - 演習：ロジスティック回帰
 
-### 4. 決定木、ランダムフォレスト – scikit-learn -
+#### モジュール04: 決定木、ランダムフォレスト – scikit-learn -
 - 決定木
 - 決定木の実装、パラメータチューニング
 - オプション演習：決定木
@@ -57,23 +56,23 @@ certificate: '/images/courses/Python Machine Learning Deep Learning Certificate.
 - ランダムフォレストの実装、パラメータチューニング
 - オプション演習：ランダムフォレスト
 
-### 5. 勾配ブースティング – LightGBM -
+#### モジュール05: 勾配ブースティング – LightGBM -
 - 勾配ブースティング木
 - LightGBMの実装、パラメータチューニング
 - 交差検証法・グリッドサーチ
 - 演習：LightGBM & グリッドサーチ
 
-### 6. ディープラーニング – TensorFlow / Keras -
+#### モジュール06: ディープラーニング – TensorFlow / Keras -
 - ディープラーニング
 - TensorFlow / Keras
 - 演習：ディープラーニング
 - 演習：構造化データへの機械学習の適用プロセスの検討
 - 構造化データへの機械学習の活用例
 
-### 7. CNNによる画像分類 – TensorFlow / Keras -
+#### モジュール07: CNNによる画像分類 – TensorFlow / Keras -
 - 畳み込みニューラルネットワーク（CNN）
 - TensorFlow / KerasよるCNN画像分類
 - 演習：CNN画像分類
 - 画像分類の活用例
 
-### 付録：PyTorchによるディープラーニングの実装
+#### モジュール08: 付録：PyTorchによるディープラーニングの実装

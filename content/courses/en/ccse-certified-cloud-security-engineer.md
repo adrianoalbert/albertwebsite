@@ -22,14 +22,24 @@ By the end of this course, participants will be able to:
 - Prepare for the EC-Council CCSE (Certified Cloud Security Engineer) exam
 
 ## Course Modules
-1. Introduction to Cloud Security
-2. Platform and Infrastructure Security in the Cloud
-3. Application Security in the Cloud
-4. Data Security in the Cloud
-5. Security Operations in the Cloud
-6. Penetration Testing in the Cloud
-7. Incident Response in the Cloud
-8. Forensic Investigation in the Cloud
-9. Business Continuity and Disaster Recovery in the Cloud
-10. Governance, Risk Management, and Compliance in the Cloud
-11. Standards, Policies, Laws, and Cloud Challenges
+#### Module 01: Introduction to Cloud Security
+
+#### Module 02: Platform and Infrastructure Security in the Cloud
+
+#### Module 03: Application Security in the Cloud
+
+#### Module 04: Data Security in the Cloud
+
+#### Module 05: Security Operations in the Cloud
+
+#### Module 06: Penetration Testing in the Cloud
+
+#### Module 07: Incident Response in the Cloud
+
+#### Module 08: Forensic Investigation in the Cloud
+
+#### Module 09: Business Continuity and Disaster Recovery in the Cloud
+
+#### Module 10: Governance, Risk Management, and Compliance in the Cloud
+
+#### Module 11: Standards, Policies, Laws, and Cloud Challenges

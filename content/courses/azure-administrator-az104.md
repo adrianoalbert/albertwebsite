@@ -33,59 +33,58 @@ certificate: '/images/courses/Azure Administrator AZ-104 Certificate.pdf'
 ● Azure Monitor、Azure Alerts、Log Analytics、Network Watcher を使用して Azure インフラストラクチャを監視します。
 
 ## 学習内容
-
-### 1. ID
+#### モジュール01: ID
 - Microsoft Entra ID
 - ユーザーとグループ
 
-### 2. ガバナンスとコンプライアンス
+#### モジュール02: ガバナンスとコンプライアンス
 - サブスクリプションとアカウント
 - Azure Policy
 - ロールベースのアクセス制御（RBAC）
 
-### 3. Azure Administration
+#### モジュール03: Azure Administration
 - Azure Resource Manager
 - Azure portal と Cloud Shell
 - Azure PowerShell および CLI
 - ARM テンプレート
 
-### 4. 仮想ネットワーク
+#### モジュール04: 仮想ネットワーク
 - 仮想ネットワーク
 - IP アドレス指定
 - ネットワーク セキュリティ グループ
 - Azure DNS
 
-### 5. サイト間接続
+#### モジュール05: サイト間接続
 - VNET ピアリング
 
-### 6. ネットワーク トラフィック管理
+#### モジュール06: ネットワーク トラフィック管理
 - ネットワーク ルーティングおよびエンドポイント
 - Azure Load Balancer
 - Azure Application Gateway
 
-### 7. Azure Storage
+#### モジュール07: Azure Storage
 - ストレージ アカウント
 - Blob Storage
 - ストレージ セキュリティ
 - Azure Files および File Sync
 - ストレージの管理
 
-### 8. Azure Virtual Machines
+#### モジュール08: Azure Virtual Machines
 - 仮想マシンのプラン
 - 仮想マシンの作成
 - 仮想マシンの可用性
 - 仮想マシンの拡張機能
 
-### 9. サーバーレス コンピューティング
+#### モジュール09: サーバーレス コンピューティング
 - Azure App Service プラン
 - Azure App Service
 - コンテナー サービス
 
-### 10. データ保護
+#### モジュール10: データ保護
 - ファイルとフォルダーのバックアップ
 - 仮想マシン バックアップ
 
-### 11. 監視
+#### モジュール11: 監視
 - Azure Monitor
 - Azure Alerts
 - Log Analytics

@@ -25,20 +25,33 @@ Learn how to implement basic network applications on Cisco platforms and automat
 - Learn application deployment model terminology and use containers for local development
 
 ## Course Modules
-- Characteristics of modern software development
-- Software development process (*self-study)
-- Software design (*self-study)
-- Network-based APIs
-- Using REST-based APIs
-- Overview of Cisco products and APIs (*self-study)
-- Programmability on Cisco products
-- IP networking overview (*self-study)
-- Networks and applications
-- YANG — model-driven programmability
-- Application deployment
-- Infrastructure automation
-- Application testing
-- Secure applications
+#### Module 01: Characteristics of modern software development
+
+#### Module 02: Software development process (*self-study)
+
+#### Module 03: Software design (*self-study)
+
+#### Module 04: Network-based APIs
+
+#### Module 05: Using REST-based APIs
+
+#### Module 06: Overview of Cisco products and APIs (*self-study)
+
+#### Module 07: Programmability on Cisco products
+
+#### Module 08: IP networking overview (*self-study)
+
+#### Module 09: Networks and applications
+
+#### Module 10: YANG — model-driven programmability
+
+#### Module 11: Application deployment
+
+#### Module 12: Infrastructure automation
+
+#### Module 13: Application testing
+
+#### Module 14: Secure applications
 
 **Sections marked (*self-study) are independent learning materials.**  
 The instructor does not cover self-study sections during class. Continue learning on your own after the course.

@@ -25,13 +25,12 @@ The CPENT (Certified Penetration Testing Professional) program provides comprehe
 - Develop reporting and vulnerability communication skills
 
 ## Course Modules
-
-### Module 01: Introduction to Penetration Testing and Methodologies
+#### Module 01: Introduction to Penetration Testing and Methodologies
 - Penetration testing concepts
 - LPT penetration testing methodology
 - Guidelines and recommendations
 
-### Module 02: Penetration Testing Scope and Engagement Planning
+#### Module 02: Penetration Testing Scope and Engagement Planning
 - Understanding Requests for Proposal (RFP)
 - Preparing and submitting proposals
 - Setting rules of engagement
@@ -40,25 +39,25 @@ The CPENT (Certified Penetration Testing Professional) program provides comprehe
 - Identifying support contacts and handling legal issues
 - Test preparation and managing scope creep
 
-### Module 03: Open Source Intelligence (OSINT)
+#### Module 03: Open Source Intelligence (OSINT)
 - OSINT collection via the web
 - OSINT through website analysis
 - OSINT through DNS investigation
 - Automating OSINT with tools, frameworks, and scripts
 
-### Module 04: Social Engineering Penetration Testing
+#### Module 04: Social Engineering Penetration Testing
 - Social engineering penetration testing concepts
 - Testing with email attack vectors
 - Testing with phone attack vectors
 - Testing with physical attack vectors
 - Reporting and countermeasures/recommendations
 
-### Module 05: Network Penetration Testing — External
+#### Module 05: Network Penetration Testing — External
 - Port scanning techniques
 - OS and service fingerprinting
 - Exploit validation methods
 
-### Module 06: Network Penetration Testing — Internal
+#### Module 06: Network Penetration Testing — Internal
 - Footprinting techniques
 - Network scanning
 - OS and service fingerprinting
@@ -71,13 +70,13 @@ The CPENT (Certified Penetration Testing Professional) program provides comprehe
 - Post-exploitation
 - Advanced techniques and tips
 
-### Module 07: Network Penetration Testing — Perimeter Devices
+#### Module 07: Network Penetration Testing — Perimeter Devices
 - Assessing firewall security implementations
 - Assessing IDS security implementations
 - Assessing router security
 - Assessing switch security
 
-### Module 08: Web Application Penetration Testing
+#### Module 08: Web Application Penetration Testing
 - Discovering default web application content
 - Discovering hidden web application content
 - Performing web vulnerability scanning
@@ -95,38 +94,37 @@ The CPENT (Certified Penetration Testing Professional) program provides comprehe
 - Testing thick-client vulnerabilities
 - Testing WordPress
 
-### Module 09: Wireless Penetration Testing
+#### Module 09: Wireless Penetration Testing
 - WLAN penetration testing
 - RFID penetration testing
 - NFC penetration testing
 
-### Module 10: IoT Penetration Testing
+#### Module 10: IoT Penetration Testing
 - Understanding IoT attacks and threats
 - IoT device penetration testing methods
 
-### Module 11: OT and SCADA Penetration Testing
+#### Module 11: OT and SCADA Penetration Testing
 - OT/SCADA concepts
 - Understanding the Modbus protocol
 - ICS and SCADA penetration testing
 
-### Module 12: Cloud Penetration Testing
+#### Module 12: Cloud Penetration Testing
 - Penetration testing in cloud environments
 - AWS-specific penetration testing
 - Azure-specific penetration testing
 - Google Cloud Platform-specific penetration testing
 
-### Module 13: Binary Analysis and Exploitation
+#### Module 13: Binary Analysis and Exploitation
 - Binary coding concepts
 - Binary analysis methodologies
 
-### Module 14: Reporting and Post-Test Actions
+#### Module 14: Reporting and Post-Test Actions
 - Penetration testing report overview
 - Report development phases
 - Report components
 - Penetration testing report analysis
 - Delivering penetration testing reports
 - Post-test actions for the organization
-
 ## Labs / Exercises
 
 ### Hands-on Practical Exercises

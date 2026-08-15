@@ -26,20 +26,31 @@ Upon completing this course, you will be able to:
 - Create Ansible playbooks to configure network devices and collect operational data
 
 ## Course Modules
-1. Network Management and Operations
-2. Software Development Methodologies
-3. Network Automation with Python
-4. NetDevOps: DevOps for Networking
-5. Managing Automation Development Environments
-6. Introduction to HTTP Network APIs
-7. Data Formats and Data Encoding
-8. HTTP-Based APIs with Python Requests
-9. YANG
-10. Using YANG Tools
-11. Model-Driven API Automation with Python
-12. Network Automation with Ansible
-13. Configuration Templating with Jinja2
+#### Module 01: Network Management and Operations
 
+#### Module 02: Software Development Methodologies
+
+#### Module 03: Network Automation with Python
+
+#### Module 04: NetDevOps: DevOps for Networking
+
+#### Module 05: Managing Automation Development Environments
+
+#### Module 06: Introduction to HTTP Network APIs
+
+#### Module 07: Data Formats and Data Encoding
+
+#### Module 08: HTTP-Based APIs with Python Requests
+
+#### Module 09: YANG
+
+#### Module 10: Using YANG Tools
+
+#### Module 11: Model-Driven API Automation with Python
+
+#### Module 12: Network Automation with Ansible
+
+#### Module 13: Configuration Templating with Jinja2
 ## Labs / Exercises
 ### Software and Hardware
 Cisco-provided remote labs

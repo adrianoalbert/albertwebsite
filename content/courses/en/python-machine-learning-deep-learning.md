@@ -24,25 +24,24 @@ Complex mathematics — often a barrier — is limited to what is necessary, so 
 - Implement image classification models with TensorFlow / Keras
 
 ## Course Modules
-
-### 1. Machine Learning Overview
+#### Module 01: Machine Learning Overview
 - Machine learning fundamentals
 - Process for using and building machine learning
 - Machine learning development environments
 
-### 2. Linear Regression — scikit-learn
+#### Module 02: Linear Regression — scikit-learn
 - Linear regression
 - Implementing linear regression models
 - Improving models with feature selection
 - Exercise: linear regression
 
-### 3. Logistic Regression — scikit-learn
+#### Module 03: Logistic Regression — scikit-learn
 - Logistic regression
 - Implementing logistic regression
 - Improving models with standardization
 - Exercise: logistic regression
 
-### 4. Decision Trees and Random Forest — scikit-learn
+#### Module 04: Decision Trees and Random Forest — scikit-learn
 - Decision trees
 - Implementation and parameter tuning
 - Optional exercise: decision trees
@@ -50,23 +49,23 @@ Complex mathematics — often a barrier — is limited to what is necessary, so 
 - Implementation and parameter tuning
 - Optional exercise: Random Forest
 
-### 5. Gradient Boosting — LightGBM
+#### Module 05: Gradient Boosting — LightGBM
 - Gradient boosting trees
 - LightGBM implementation and parameter tuning
 - Cross-validation and grid search
 - Exercise: LightGBM and grid search
 
-### 6. Deep Learning — TensorFlow / Keras
+#### Module 06: Deep Learning — TensorFlow / Keras
 - Deep learning
 - TensorFlow / Keras
 - Exercise: deep learning
 - Exercise: applying ML processes to structured data
 - Examples of machine learning on structured data
 
-### 7. Image Classification with CNN — TensorFlow / Keras
+#### Module 07: Image Classification with CNN — TensorFlow / Keras
 - Convolutional neural networks (CNN)
 - CNN image classification with TensorFlow / Keras
 - Exercise: CNN image classification
 - Examples of image classification use cases
 
-### Appendix: Deep Learning Implementation with PyTorch
+#### Module 08: Appendix: Deep Learning Implementation with PyTorch

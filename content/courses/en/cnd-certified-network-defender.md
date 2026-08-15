@@ -26,37 +26,45 @@ By the end of this course, participants will be able to:
 Comprehensive learning across 20 modules.
 
 ### Introduction
-1. Network Attacks and Defense Strategies
-2. Network Security Management
+
+#### Module 01: Network Attacks and Defense Strategies
+#### Module 02: Network Security Management
 
 ### Defense: Network Perimeter
-3. Network Security Technologies
-4. Network Perimeter Security
+
+#### Module 03: Network Security Technologies
+#### Module 04: Network Perimeter Security
 
 ### Defense: Endpoints
-5. Endpoint Security — Windows
-6. Endpoint Security — Linux
-7. Endpoint Security — Mobile Devices
-8. Endpoint Security — IoT
+
+#### Module 05: Endpoint Security — Windows
+#### Module 06: Endpoint Security — Linux
+#### Module 07: Endpoint Security — Mobile Devices
+#### Module 08: Endpoint Security — IoT
 
 ### Defense: Applications and Data
-9. Application Security Management
-10. Data Security
+
+#### Module 09: Application Security Management
+#### Module 10: Data Security
 
 ### Defense: Enterprise Cloud
-11. Enterprise Virtual Network Security
-12. Enterprise Cloud Network Security
-13. Enterprise Wireless Network Security
+
+#### Module 11: Enterprise Virtual Network Security
+#### Module 12: Enterprise Cloud Network Security
+#### Module 13: Enterprise Wireless Network Security
 
 ### Detection
-14. Network Traffic Monitoring and Analysis
-15. Network Log Monitoring and Analysis
+
+#### Module 14: Network Traffic Monitoring and Analysis
+#### Module 15: Network Log Monitoring and Analysis
 
 ### Response
-16. Incident Response and Forensic Investigation
-17. Business Continuity and Disaster Recovery
+
+#### Module 16: Incident Response and Forensic Investigation
+#### Module 17: Business Continuity and Disaster Recovery
 
 ### Prediction
-18. Risk Prediction through Risk Management
-19. Threat Assessment through Attack Surface Analysis
-20. Threat Prediction with Cyber Threat Intelligence
+
+#### Module 18: Risk Prediction through Risk Management
+#### Module 19: Threat Assessment through Attack Surface Analysis
+#### Module 20: Threat Prediction with Cyber Threat Intelligence

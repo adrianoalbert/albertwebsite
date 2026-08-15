@@ -27,59 +27,58 @@ This course teaches how to manage Azure subscriptions, secure identities, admini
 - Monitor Azure infrastructure with Azure Monitor, Alerts, Log Analytics, and Network Watcher
 
 ## Course Modules
-
-### 1. Identity
+#### Module 01: Identity
 - Microsoft Entra ID
 - Users and groups
 
-### 2. Governance and Compliance
+#### Module 02: Governance and Compliance
 - Subscriptions and accounts
 - Azure Policy
 - Role-based access control (RBAC)
 
-### 3. Azure Administration
+#### Module 03: Azure Administration
 - Azure Resource Manager
 - Azure portal and Cloud Shell
 - Azure PowerShell and CLI
 - ARM templates
 
-### 4. Virtual Networking
+#### Module 04: Virtual Networking
 - Virtual networks
 - IP addressing
 - Network security groups
 - Azure DNS
 
-### 5. Site-to-Site Connectivity
+#### Module 05: Site-to-Site Connectivity
 - VNET peering
 
-### 6. Network Traffic Management
+#### Module 06: Network Traffic Management
 - Network routing and endpoints
 - Azure Load Balancer
 - Azure Application Gateway
 
-### 7. Azure Storage
+#### Module 07: Azure Storage
 - Storage accounts
 - Blob Storage
 - Storage security
 - Azure Files and File Sync
 - Storage management
 
-### 8. Azure Virtual Machines
+#### Module 08: Azure Virtual Machines
 - Virtual machine planning
 - Creating virtual machines
 - Virtual machine availability
 - Virtual machine extensions
 
-### 9. Serverless Computing
+#### Module 09: Serverless Computing
 - Azure App Service plans
 - Azure App Service
 - Container services
 
-### 10. Data Protection
+#### Module 10: Data Protection
 - File and folder backup
 - Virtual machine backup
 
-### 11. Monitoring
+#### Module 11: Monitoring
 - Azure Monitor
 - Azure Alerts
 - Log Analytics
