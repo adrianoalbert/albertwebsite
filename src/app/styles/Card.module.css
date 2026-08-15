@@ -336,23 +336,21 @@
 }
 
 .timelineItem:nth-child(odd) .timelineDate {
-  text-align: right;
-  padding-right: 0;
-  padding-left: 0;
   position: absolute;
-  right: -165px;
-  top: 0;
-  width: 150px;
+  left: calc(100% + 24px);
+  right: auto;
+  top: 2px;
+  width: max-content;
+  text-align: left;
 }
 
 .timelineItem:nth-child(even) .timelineDate {
-  text-align: left;
-  padding-right: 0;
-  padding-left: 0;
   position: absolute;
-  left: -165px;
-  top: 0;
-  width: 150px;
+  right: calc(100% + 24px);
+  left: auto;
+  top: 2px;
+  width: max-content;
+  text-align: right;
 }
 
 .timelineItem:nth-child(odd) .timelineContent {
@@ -380,7 +378,7 @@
 
 .timelineDate {
   font-family: var(--font-display), "Syne", sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   color: var(--brand, #5aa8c4);
   -webkit-text-fill-color: unset;
   background: none;
@@ -443,7 +441,7 @@
     top: auto !important;
     width: auto !important;
     margin-bottom: 8px;
-    font-size: 18px !important;
+    font-size: 0.875rem !important;
   }
   
   .timelineItem:nth-child(even) .timelineDate {
@@ -456,7 +454,7 @@
     top: auto !important;
     width: auto !important;
     margin-bottom: 8px;
-    font-size: 18px !important;
+    font-size: 0.875rem !important;
   }
   
   .timelineContent {
@@ -1343,11 +1341,10 @@
 }
 
 .timelineDate {
-  font-size: 24px;
-  background: linear-gradient(45deg, #6b7280, #9ca3af, #d1d5db, #e5e7eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 0.9rem;
+  background: none;
+  -webkit-text-fill-color: unset;
+  color: var(--brand, #5aa8c4);
   margin-bottom: 2px;
   font-weight: 600;
   white-space: nowrap;

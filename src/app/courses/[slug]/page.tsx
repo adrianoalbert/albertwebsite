@@ -52,7 +52,7 @@ export default async function CoursePage({
         </div>
 
         <div className={styles.textContent} style={{ maxWidth: 900, marginTop: 20 }}>
-          <h1 className={styles.title} style={{ fontSize: 'clamp(1.75rem, 4vw, 2.25rem)', marginBottom: 16 }}>
+          <h1 className={styles.title} style={{ fontSize: 'clamp(1.35rem, 2.8vw, 1.75rem)', marginBottom: 16 }}>
             {course.title}
           </h1>
 
