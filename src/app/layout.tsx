@@ -34,11 +34,20 @@ export const metadata: Metadata = {
     siteName: "Adriano Albert Muniz",
     title: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
     description: siteDescription,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1920,
+        height: 1080,
+        alt: "Adriano Albert Muniz, Ph.D. — Lead IT/OT Systems Engineer",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
     description: siteDescription,
+    images: ["/og-image.png"],
   },
 };
 
