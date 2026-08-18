@@ -1033,7 +1033,8 @@
   max-width: 100%;
   position: relative;
   backdrop-filter: blur(10px);
-  touch-action: pan-x pan-y;
+  /* pan for table scroll; pinch-zoom so page zoom still works on this box */
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .certificationsTableWrapper::before {
