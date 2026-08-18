@@ -725,6 +725,8 @@
   margin: 0;
   font-size: 1.1rem;
   color: #e2e8f0;
+  flex: 1;
+  min-width: 0;
 }
 
 .certDetails {
@@ -742,19 +744,30 @@
 }
 
 .certLogo {
-  width: 90px;
-  height: 90px;
+  width: 115px;
+  height: auto;
+  max-height: 115px;
   object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
 }
 
 .smallLogo {
-  width: 90px;
+  width: 115px;
   height: 90px;
+  max-height: 90px;
 }
 
 .largeLogo {
-  width: 90px;
-  height: 90px;
+  width: 115px;
+  height: 100px;
+  max-height: 100px;
+}
+
+.circularLogo {
+  width: 115px;
+  height: 115px;
+  max-height: 115px;
 }
 
 .certInfo {
@@ -1013,7 +1026,7 @@
   border: 1px solid var(--surface-border, rgba(90, 168, 196, 0.2));
   border-radius: 12px;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   min-width: 0;

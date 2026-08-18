@@ -39,7 +39,7 @@ export default function SiteHeader() {
           />
           <span className="site-brand-text">
             <span className="site-brand-name">Adriano Albert Muniz</span>
-            <span className="site-brand-role">Lead IT/OT Systems Engineer</span>
+            <span className="site-brand-role">IT/OT Systems Engineer &amp; Cybersecurity Professional</span>
           </span>
         </Link>
 

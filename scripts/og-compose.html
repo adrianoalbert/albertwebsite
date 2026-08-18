@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OG compose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Syne:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0a1117;
+    }
+    .card {
+      width: 1200px;
+      height: 630px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      padding: 0 88px;
+      background: #0a1117;
+    }
+    .mark {
+      width: 168px;
+      height: 168px;
+      flex-shrink: 0;
+      border-radius: 36px;
+      display: block;
+    }
+    .copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 0;
+      gap: 0;
+    }
+    h1 {
+      font-family: Syne, sans-serif;
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #f2f5f7;
+    }
+    .accent {
+      width: 72px;
+      height: 3px;
+      margin: 22px 0 20px;
+      background: #5aa8c4;
+      border-radius: 999px;
+    }
+    .role {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 1.35;
+      color: #a8b4be;
+      max-width: 760px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img
+      class="mark"
+      src="/images/brand/aa-icon-v1-geometric.svg"
+      width="168"
+      height="168"
+      alt=""
+    />
+    <div class="copy">
+      <h1>Adriano Albert Muniz, Ph.D.</h1>
+      <div class="accent" aria-hidden="true"></div>
+      <p class="role">IT/OT Systems Engineer &amp; Cybersecurity Professional</p>
+    </div>
+  </div>
+</body>
+</html>

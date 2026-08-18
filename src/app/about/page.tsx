@@ -12,7 +12,7 @@ import HonorsAwardsSection from '../components/HonorsAwardsSection'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Lead IT/OT Systems Engineer with 10+ years in IT/OT, global OT project experience, and cybersecurity countermeasures for delivered systems.',
+    'IT/OT Systems Engineer and Cybersecurity Professional with 10+ years in IT/OT, global OT project experience, and cybersecurity countermeasures for delivered systems.',
 }
 
 export default async function About() {

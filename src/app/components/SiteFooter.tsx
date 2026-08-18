@@ -17,7 +17,7 @@ export default function SiteFooter() {
           <Link href="/" className="site-footer-home">
             Adriano Albert Muniz, Ph.D.
           </Link>
-          <p>Lead IT/OT Systems Engineer</p>
+          <p>IT/OT Systems Engineer &amp; Cybersecurity Professional</p>
         </div>
 
         <nav className="site-footer-nav" aria-label="Footer">

@@ -18,12 +18,12 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 const siteDescription =
-  "Portfolio of Adriano Albert Muniz, Ph.D. — Lead IT/OT Systems Engineer specializing in cybersecurity, computer networks research, and industrial automation.";
+  "Portfolio of Adriano Albert Muniz, Ph.D. — IT/OT Systems Engineer and Cybersecurity Professional specializing in industrial automation, computer networks, and cybersecurity.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.adrianoalbert.com"),
   title: {
-    default: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
+    default: "Adriano Albert Muniz, Ph.D. | IT/OT Systems Engineer & Cybersecurity Professional",
     template: "%s | Adriano Albert Muniz",
   },
   description: siteDescription,
@@ -32,20 +32,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.adrianoalbert.com",
     siteName: "Adriano Albert Muniz",
-    title: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
+    title: "Adriano Albert Muniz, Ph.D. | IT/OT Systems Engineer & Cybersecurity Professional",
     description: siteDescription,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Adriano Albert Muniz, Ph.D. — Lead IT/OT Systems Engineer",
+        alt: "Adriano Albert Muniz, Ph.D. — IT/OT Systems Engineer & Cybersecurity Professional",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adriano Albert Muniz, Ph.D. | Lead IT/OT Systems Engineer",
+    title: "Adriano Albert Muniz, Ph.D. | IT/OT Systems Engineer & Cybersecurity Professional",
     description: siteDescription,
     images: ["/og-image.png"],
   },

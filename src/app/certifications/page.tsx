@@ -86,9 +86,11 @@ export default async function CertificationsPage() {
                     src={cert.image}
                             alt={`${cert.title} logo`} 
                             className={`${styles.certLogo} ${
-                              cert.title.includes('CompTIA Security Analytics Professional') 
-                                ? styles.smallLogo 
-                                : styles.largeLogo
+                              cert.title.includes('CompTIA Security Analytics Professional')
+                                ? styles.smallLogo
+                                : /\/(cnd|ceh)([.-]|$)/i.test(cert.image || '')
+                                  ? styles.circularLogo
+                                  : styles.largeLogo
                             }`}
                           />
                 )}

@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-Lead IT/OT Systems Engineer with more than 10 years of experience designing, deploying, and supporting information and operational technology environments.
+IT/OT Systems Engineer and Cybersecurity Professional with more than 10 years of experience designing, deploying, and supporting information and operational technology environments.
 
 Work on OT projects has spanned customers worldwide. Over the past five years, that work has expanded into cybersecurity for IT/OT systems — bringing security thinking into environments where availability and safety matter most.
 
