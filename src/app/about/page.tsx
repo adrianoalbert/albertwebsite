@@ -49,9 +49,6 @@ export default async function About() {
         <div className={styles.bioSection}>
           <div
             className={styles.textContent}
-            style={{
-              fontSize: 'clamp(18px, 2vw, 22px)'
-            }}
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </div>
