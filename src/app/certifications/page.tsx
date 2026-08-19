@@ -32,7 +32,7 @@ export default async function CertificationsPage() {
     if (title.includes('Microsoft')) return 'Microsoft';
     if (title.includes('CompTIA')) return 'CompTIA';
     if (title.includes('EC-Council') || title.includes('Certified Network Defender') || title.includes('Certified Ethical Hacker')) return 'EC-Council';
-    if (title.includes('AWS')) return 'Amazon Web Services';
+    if (title.includes('AWS')) return 'AWS';
     if (title.includes('Google')) return 'Google';
     if (title.includes('Cisco')) return 'Cisco';
     if (title.includes('Oracle')) return 'Oracle';
@@ -158,4 +158,4 @@ export default async function CertificationsPage() {
       </div>
     </div>
   )
-} 
+}
