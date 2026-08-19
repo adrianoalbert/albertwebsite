@@ -49,7 +49,7 @@
 }
 
 .textContent {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: var(--text-soft, #c5d0d8);
   background-color: var(--surface, rgba(16, 26, 34, 0.78));
