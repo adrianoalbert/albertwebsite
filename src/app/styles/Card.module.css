@@ -517,7 +517,7 @@
 @media (max-width: 480px) {
   .header {
     font-size: clamp(1.35rem, 4.5vw, 1.55rem) !important;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     gap: 10px;
   }
 

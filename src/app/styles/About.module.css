@@ -103,8 +103,12 @@
 }
 
 .textContent p {
-  margin-bottom: 0.8rem;
+  margin: 0 0 0.8rem;
   line-height: 1.6;
+}
+
+.textContent p:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive styles for different screen sizes */
@@ -149,12 +153,16 @@
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .content {
-    padding: 40px 15px;
+    padding: 24px 15px 32px;
+  }
+
+  .bioSection {
+    margin-bottom: 28px;
   }
   
   .header {
     font-size: 1.5rem;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
   
   .headerIcon {
@@ -163,10 +171,15 @@
   }
 
   .textContent {
-    font-size: 18px;
-    line-height: 1.7;
-    padding: 25px;
+    font-size: 16px;
+    line-height: 1.55;
+    padding: 18px 20px;
     width: 100%;
+  }
+
+  .textContent p {
+    margin-bottom: 0.65rem;
+    line-height: 1.55;
   }
   
   .aboutH2 {
@@ -193,12 +206,16 @@
 
 @media (max-width: 480px) {
   .content {
-    padding: 30px 10px;
+    padding: 14px 12px 24px;
+  }
+
+  .bioSection {
+    margin-bottom: 22px;
   }
   
   .header {
     font-size: 1.35rem;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     gap: 10px;
   }
   
@@ -208,14 +225,19 @@
   }
 
   .textContent {
-    font-size: 15px;
-    line-height: 1.6;
-    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 14px 16px;
   }
   
   /* More specific override for small mobile */
   .container .content .textContent {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .textContent p {
+    margin-bottom: 0.55rem;
+    line-height: 1.5;
   }
   
   .aboutH2 {
@@ -242,12 +264,25 @@
 
 /* Extra small mobile phones */
 @media (max-width: 360px) {
+  .content {
+    padding: 12px 10px 20px;
+  }
+
   .header {
     font-size: 1.25rem;
+    margin-bottom: 10px;
   }
   
   .textContent {
-    font-size: 15px;
-    padding: 15px;
+    font-size: 13.5px;
+    padding: 12px 14px;
+  }
+
+  .container .content .textContent {
+    font-size: 13.5px;
+  }
+
+  .textContent p {
+    margin-bottom: 0.5rem;
   }
 } 
