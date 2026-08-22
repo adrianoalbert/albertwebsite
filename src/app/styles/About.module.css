@@ -2,6 +2,8 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   background: transparent;
   color: var(--text, #f2f5f7);
 }
@@ -20,6 +22,7 @@
   position: relative;
   z-index: 1;
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -45,6 +48,7 @@
 
 .bioSection {
   max-width: 900px;
+  width: 100%;
   margin: 0 auto 40px;
 }
 
@@ -57,8 +61,12 @@
   padding: 28px 32px;
   border-radius: 12px;
   min-width: 0;
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   backdrop-filter: blur(10px);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Subsection headers */

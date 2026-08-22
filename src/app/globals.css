@@ -22,6 +22,13 @@ html {
   min-width: 100%;
   width: 100%;
   color-scheme: dark;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -33,6 +40,7 @@ body {
   padding: 0;
   min-width: 100%;
   width: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -107,11 +115,16 @@ body > * {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .site-main {
   flex: 1;
   min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .site-header {

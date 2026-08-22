@@ -57,8 +57,11 @@
   padding: 28px 32px;
   border-radius: 12px;
   max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   backdrop-filter: blur(10px);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .textContent h2 {
