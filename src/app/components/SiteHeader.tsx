@@ -7,9 +7,9 @@ import { useEffect, useState } from 'react'
 
 const NAV = [
   { href: '/about', label: 'About' },
+  { href: '/publications', label: 'Publications' },
   { href: '/certifications', label: 'Certifications' },
   { href: '/courses', label: 'Courses' },
-  { href: '/publications', label: 'Publications' },
 ]
 
 export default function SiteHeader() {
@@ -39,7 +39,9 @@ export default function SiteHeader() {
           />
           <span className="site-brand-text">
             <span className="site-brand-name">Adriano Albert Muniz</span>
-            <span className="site-brand-role">IT/OT Systems Engineer &amp; Cybersecurity Professional</span>
+            <span className="site-brand-role">
+              IT/OT Systems Engineer | Cybersecurity Professional | Computer Networks Researcher
+            </span>
           </span>
         </Link>
 

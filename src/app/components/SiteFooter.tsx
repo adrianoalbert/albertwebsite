@@ -4,9 +4,9 @@ import { SiX } from 'react-icons/si'
 
 const NAV = [
   { href: '/about', label: 'About' },
+  { href: '/publications', label: 'Publications' },
   { href: '/certifications', label: 'Certifications' },
   { href: '/courses', label: 'Courses' },
-  { href: '/publications', label: 'Publications' },
 ]
 
 export default function SiteFooter() {
@@ -17,7 +17,7 @@ export default function SiteFooter() {
           <Link href="/" className="site-footer-home">
             Adriano Albert Muniz, Ph.D.
           </Link>
-          <p>IT/OT Systems Engineer &amp; Cybersecurity Professional</p>
+          <p>IT/OT Systems Engineer | Cybersecurity Professional | Computer Networks Researcher</p>
         </div>
 
         <nav className="site-footer-nav" aria-label="Footer">

@@ -6,10 +6,11 @@ import { SiX } from "react-icons/si";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Adriano Albert Muniz, Ph.D. | IT/OT Systems Engineer & Cybersecurity Professional",
+    absolute:
+      "Adriano Albert Muniz, Ph.D. | IT/OT Systems Engineer | Cybersecurity Professional | Computer Networks Researcher",
   },
   description:
-    "IT/OT Systems Engineer and Cybersecurity Professional with a Ph.D. in computer networks — industrial automation and professional training.",
+    "Designing, securing, and optimizing IT/OT systems and computer networks for reliable and resilient industrial environments.",
 };
 
 export default function Home() {
@@ -29,16 +30,19 @@ export default function Home() {
         <div className="brand-mark-accent" aria-hidden="true" />
         <h1>Adriano Albert Muniz, Ph.D.</h1>
         <p className="subtitle">
-          <span className="subtitle-line">IT/OT Systems Engineer &amp; Cybersecurity Professional</span>
+          <span className="subtitle-line">
+            IT/OT Systems Engineer | Cybersecurity Professional | Computer Networks Researcher
+          </span>
           <span className="subtitle-tagline">
-            Engineering secure and reliable industrial systems through expertise in IT/OT, computer networks, and cybersecurity.
+            Designing, securing, and optimizing IT/OT systems and computer networks for reliable and
+            resilient industrial environments.
           </span>
         </p>
         <nav className="main-nav" aria-label="Primary">
           <Link href="/about">About</Link>
+          <Link href="/publications">Publications</Link>
           <Link href="/certifications">Certifications</Link>
           <Link href="/courses">Courses</Link>
-          <Link href="/publications">Publications</Link>
         </nav>
 
         <div className="social-icons">
