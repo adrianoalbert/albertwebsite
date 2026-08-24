@@ -9,6 +9,7 @@ import {
   courseMatchesArea,
   coursesUi,
   formatCourseDate,
+  getCourseCardMeta,
   parseCourseArea,
   parseCourseLocale,
   withCourseLang,
@@ -82,78 +83,61 @@ export default async function CoursesPage({
           </Suspense>
         </div>
         <div className={styles.timeline}>
-          {sortedCourses.map((course) => (
-            <div key={course.slug} className={styles.timelineItem}>
-              <div className={styles.timelineContent}>
-                <div className={styles.timelineDot}></div>
-                <div className={styles.timelineDate}>
-                  {formatCourseDate(course.date, locale, 'short')}
-                </div>
-                <div className={styles.timelineCard}>
-                  <h2 className={styles.title}>{course.title}</h2>
-                  {course.tags && course.tags.length > 0 && (
-                    <div className={styles.tags}>
-                      {course.tags.map((tag) => (
-                        <span key={tag} className={styles.tag}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  <div className={styles.timelineActions}>
-                    <Link
-                      href={withCourseLang(`/courses/${course.slug}`, locale)}
-                      className={styles.button}
-                      style={{ textDecoration: 'none', color: 'inherit' }}
-                    >
-                      <span>
-                        {t.viewDetails}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </span>
-                    </Link>
-                    {course.certificate && (
-                      <Link
-                        href={course.certificate}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${styles.button} ${styles.credentialButton}`}
-                      >
-                        {t.showCredentials}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                          <polyline points="15 3 21 3 21 9" />
-                          <line x1="10" y1="14" x2="21" y2="3" />
-                        </svg>
-                      </Link>
+          {sortedCourses.map((course) => {
+            const card = getCourseCardMeta(course.slug, locale)
+            const indexTags = card?.tags ?? course.tags.slice(0, 2)
+
+            return (
+              <div key={course.slug} className={styles.timelineItem}>
+                <div className={styles.timelineContent}>
+                  <div className={styles.timelineDot}></div>
+                  <div className={styles.timelineDate}>
+                    {formatCourseDate(course.date, locale, 'short')}
+                  </div>
+                  <div className={styles.timelineCard}>
+                    <h2 className={styles.title}>{course.title}</h2>
+                    {card?.summary && (
+                      <p className={styles.timelineSummary}>{card.summary}</p>
                     )}
+                    {indexTags.length > 0 && (
+                      <div className={styles.tags}>
+                        {indexTags.map((tag) => (
+                          <span key={tag} className={styles.tag}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div className={styles.timelineActions}>
+                      <Link
+                        href={withCourseLang(`/courses/${course.slug}`, locale)}
+                        className={styles.button}
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                      >
+                        <span>
+                          {t.viewDetails}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                          </svg>
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>

@@ -402,6 +402,14 @@
   justify-content: space-between;
 }
 
+.timelineSummary {
+  margin: 0 0 10px;
+  color: var(--text-muted, #a8b4be);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
 .timelineActions {
   display: flex;
   flex-direction: column;

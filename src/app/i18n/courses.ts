@@ -108,6 +108,92 @@ export function courseMatchesArea(slug: string, area: CourseArea): boolean {
   return courseSecondaryAreas[slug]?.includes(area) ?? false;
 }
 
+/** Index-card copy: one-line summary + at most two tags. */
+export const courseCardMeta: Record<
+  string,
+  { summary: Record<CourseLocale, string>; tags: [string, string] }
+> = {
+  "cpent-certified-penetration-testing": {
+    summary: {
+      en: "Advanced penetration testing for real-world red-team engagements.",
+      ja: "実環境を想定した高度なペネトレーションテスト研修。",
+    },
+    tags: ["EC-Council", "Penetration Testing"],
+  },
+  "cnd-certified-network-defender": {
+    summary: {
+      en: "Defensive network security and blue-team fundamentals.",
+      ja: "ネットワーク防御とブルーチームの基礎を学ぶ研修。",
+    },
+    tags: ["EC-Council", "Network Defense"],
+  },
+  "ceh-certified-ethical-hacker": {
+    summary: {
+      en: "Ethical hacking methods, tools, and attacker-minded defense.",
+      ja: "倫理的ハッキングの手法と防御視点を体系的に学ぶ研修。",
+    },
+    tags: ["EC-Council", "Ethical Hacking"],
+  },
+  "ccse-certified-cloud-security-engineer": {
+    summary: {
+      en: "Cloud security engineering across major cloud platforms.",
+      ja: "主要クラウドにおけるクラウドセキュリティエンジニアリング研修。",
+    },
+    tags: ["Cloud Security", "CCSE"],
+  },
+  "linux-security": {
+    summary: {
+      en: "Linux hardening and operating-system security fundamentals.",
+      ja: "LinuxのハードニングとOSセキュリティの基礎研修。",
+    },
+    tags: ["Linux", "Security"],
+  },
+  "azure-administrator-az104": {
+    summary: {
+      en: "Administer Azure identity, compute, storage, and networking.",
+      ja: "AzureのID・コンピュート・ストレージ・ネットワーク管理研修。",
+    },
+    tags: ["Microsoft Azure", "Cloud"],
+  },
+  "cisco-devcor": {
+    summary: {
+      en: "Build apps on Cisco platforms with core APIs and DevOps practices.",
+      ja: "Cisco基盤とAPIを用いたアプリケーション開発・DevOps研修。",
+    },
+    tags: ["Cisco", "Network Automation"],
+  },
+  "cisco-devasc": {
+    summary: {
+      en: "Automate workflows and apps using Cisco core platforms and APIs.",
+      ja: "Cisco基盤のAPIを活用したアプリ開発と自動化ワークフロー研修。",
+    },
+    tags: ["Cisco", "Automation"],
+  },
+  "cisco-csau": {
+    summary: {
+      en: "Fundamentals of network automation for Cisco solutions.",
+      ja: "Ciscoソリューション向けネットワーク自動化の基礎研修。",
+    },
+    tags: ["Cisco", "Automation"],
+  },
+  "python-machine-learning-deep-learning": {
+    summary: {
+      en: "Hands-on machine learning and deep learning with Python.",
+      ja: "Pythonによる機械学習・ディープラーニングの実践研修。",
+    },
+    tags: ["Python", "Machine Learning"],
+  },
+};
+
+export function getCourseCardMeta(slug: string, locale: CourseLocale) {
+  const meta = courseCardMeta[slug];
+  if (!meta) return null;
+  return {
+    summary: meta.summary[locale],
+    tags: meta.tags,
+  };
+}
+
 export function parseCourseLocale(
   value: string | string[] | undefined | null
 ): CourseLocale {
