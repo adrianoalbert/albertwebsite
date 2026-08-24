@@ -117,7 +117,8 @@ body > * {
   flex-direction: column;
   width: 100%;
   max-width: 100%;
-  overflow-x: clip;
+  /* Do not clip here — overflow-x:clip on the shell cuts sticky
+     header paint and leaves a 1px top seam over the fixed binary bg */
 }
 
 .site-main {
@@ -125,6 +126,7 @@ body > * {
   min-width: 0;
   width: 100%;
   max-width: 100%;
+  overflow-x: clip;
 }
 
 .site-header {
@@ -132,10 +134,25 @@ body > * {
   top: 0;
   z-index: 40;
   border-bottom: 1px solid rgba(90, 168, 196, 0.18);
-  /* Near-opaque so scrolled text/lines do not show through the bar */
-  background: rgba(10, 17, 23, 0.96);
-  backdrop-filter: blur(16px) saturate(1.1);
-  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  /* Opaque — must fully cover the fixed binary atmosphere while stuck */
+  background-color: var(--bg-deep);
+  background-image: none;
+}
+
+/*
+  Fixed seal under the sticky bar: covers the subpixel/safe-area gap
+  at the top of the viewport where the binary schema was leaking through.
+*/
+.site-header::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: max(3px, env(safe-area-inset-top, 0px));
+  background: var(--bg-deep);
+  z-index: 39;
+  pointer-events: none;
 }
 
 .site-header-inner {
@@ -387,9 +404,8 @@ body > * {
     align-items: stretch;
     gap: 0;
     padding: 12px 16px 16px;
-    background: rgba(10, 17, 23, 0.96);
+    background: var(--bg-deep);
     border-bottom: 1px solid rgba(90, 168, 196, 0.18);
-    backdrop-filter: blur(14px);
   }
 
   .site-nav.is-open {
