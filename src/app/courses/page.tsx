@@ -4,14 +4,17 @@ import { Suspense } from 'react'
 import { getContentByType } from '@/lib/markdown'
 import styles from '../styles/Card.module.css'
 import CourseLanguageSwitcher from '../components/CourseLanguageSwitcher'
+import CourseAreaFilter from '../components/CourseAreaFilter'
 import {
+  courseMatchesArea,
   coursesUi,
   formatCourseDate,
+  parseCourseArea,
   parseCourseLocale,
   withCourseLang,
 } from '../i18n/courses'
 
-type SearchParams = { lang?: string | string[] }
+type SearchParams = { lang?: string | string[]; area?: string | string[] }
 
 export const metadata: Metadata = {
   title: 'Courses',
@@ -28,20 +31,23 @@ export default async function CoursesPage({
 }) {
   const resolvedSearchParams = await Promise.resolve(searchParams ?? {})
   const locale = parseCourseLocale(resolvedSearchParams.lang)
+  const area = parseCourseArea(resolvedSearchParams.area)
   const t = coursesUi[locale]
   const courses = await getContentByType('courses', locale)
 
-  const sortedCourses = courses.sort((a, b) => {
-    const dateA = new Date(a.date)
-    const dateB = new Date(b.date)
-    return dateB.getTime() - dateA.getTime()
-  })
+  const sortedCourses = courses
+    .filter((course) => courseMatchesArea(course.slug, area))
+    .sort((a, b) => {
+      const dateA = new Date(a.date)
+      const dateB = new Date(b.date)
+      return dateB.getTime() - dateA.getTime()
+    })
 
   return (
     <div className={styles.container}>
       <div className={styles.overlay} aria-hidden="true"></div>
       <div className={styles.content}>
-        <div className={styles.header}>
+        <div className={`${styles.header} course-page-header`}>
           <div className="course-header-row">
             <div className="course-header-title">
               <svg
@@ -71,6 +77,9 @@ export default async function CoursesPage({
               <CourseLanguageSwitcher locale={locale} />
             </Suspense>
           </div>
+          <Suspense fallback={null}>
+            <CourseAreaFilter locale={locale} area={area} />
+          </Suspense>
         </div>
         <div className={styles.timeline}>
           {sortedCourses.map((course) => (

@@ -14,13 +14,47 @@ export const courseLocaleNames: Record<CourseLocale, string> = {
   ja: "日本語",
 };
 
+export const courseAreas = [
+  "all",
+  "security",
+  "cloud",
+  "networking",
+  "ai-ml",
+] as const;
+
+export type CourseArea = (typeof courseAreas)[number];
+
+export const defaultCourseArea: CourseArea = "all";
+
+/** Primary area per course slug. */
+export const coursePrimaryArea: Record<string, Exclude<CourseArea, "all">> = {
+  "cpent-certified-penetration-testing": "security",
+  "cnd-certified-network-defender": "security",
+  "ceh-certified-ethical-hacker": "security",
+  "ccse-certified-cloud-security-engineer": "security",
+  "linux-security": "security",
+  "azure-administrator-az104": "cloud",
+  "cisco-devcor": "networking",
+  "cisco-devasc": "networking",
+  "cisco-csau": "networking",
+  "python-machine-learning-deep-learning": "ai-ml",
+};
+
+/** Extra areas a course should appear under (dual-list). */
+export const courseSecondaryAreas: Record<string, Exclude<CourseArea, "all">[]> =
+  {
+    "ccse-certified-cloud-security-engineer": ["cloud"],
+  };
+
 export type CoursesUiCopy = {
   title: string;
   viewDetails: string;
   showCredentials: string;
   language: string;
+  area: string;
   notFound: string;
   backToCourses: string;
+  areas: Record<CourseArea, string>;
 };
 
 export const coursesUi: Record<CourseLocale, CoursesUiCopy> = {
@@ -29,18 +63,50 @@ export const coursesUi: Record<CourseLocale, CoursesUiCopy> = {
     viewDetails: "View Details",
     showCredentials: "Show Credentials",
     language: "Language",
+    area: "Area",
     notFound: "Course not found",
     backToCourses: "Back to Courses",
+    areas: {
+      all: "All",
+      security: "Security",
+      cloud: "Cloud",
+      networking: "Networking / Automation",
+      "ai-ml": "AI / ML",
+    },
   },
   ja: {
     title: "コース",
     viewDetails: "詳細を見る",
     showCredentials: "資格・証明書を表示",
     language: "言語",
+    area: "分野",
     notFound: "コースが見つかりません",
     backToCourses: "コース一覧へ戻る",
+    areas: {
+      all: "すべて",
+      security: "セキュリティ",
+      cloud: "クラウド",
+      networking: "ネットワーク / 自動化",
+      "ai-ml": "AI / ML",
+    },
   },
 };
+
+export function parseCourseArea(
+  value: string | string[] | undefined | null
+): CourseArea {
+  const raw = Array.isArray(value) ? value[0] : value;
+  return courseAreas.includes(raw as CourseArea)
+    ? (raw as CourseArea)
+    : defaultCourseArea;
+}
+
+export function courseMatchesArea(slug: string, area: CourseArea): boolean {
+  if (area === "all") return true;
+  const primary = coursePrimaryArea[slug];
+  if (primary === area) return true;
+  return courseSecondaryAreas[slug]?.includes(area) ?? false;
+}
 
 export function parseCourseLocale(
   value: string | string[] | undefined | null
