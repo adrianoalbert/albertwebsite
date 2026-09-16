@@ -34,6 +34,7 @@ export const coursePrimaryArea: Record<string, Exclude<CourseArea, "all">> = {
   "ccse-certified-cloud-security-engineer": "security",
   "linux-security": "security",
   "azure-administrator-az104": "cloud",
+  "cisco-encor": "networking",
   "cisco-devcor": "networking",
   "cisco-devasc": "networking",
   "cisco-csau": "networking",
@@ -155,6 +156,13 @@ export const courseCardMeta: Record<
     },
     tags: ["Microsoft Azure", "Cloud"],
   },
+  "cisco-encor": {
+    summary: {
+      en: "Enterprise wired/wireless core, SD-Access, SD-WAN, and network automation.",
+      ja: "企業向け有線・無線のコア技術とSD-Access / SD-WAN、自動化を学ぶ研修。",
+    },
+    tags: ["Cisco", "Enterprise Networking"],
+  },
   "cisco-devcor": {
     summary: {
       en: "Build apps on Cisco platforms with core APIs and DevOps practices.",
@@ -250,6 +258,15 @@ export function formatCourseDate(
   style: "short" | "long" = "short"
 ): string {
   const { year, month, day } = parseDateParts(dateString);
+  if (
+    !Number.isFinite(year) ||
+    !Number.isFinite(month) ||
+    !Number.isFinite(day) ||
+    month < 1 ||
+    month > 12
+  ) {
+    return "";
+  }
 
   // Timeline/list dates use the same compact English style in both languages.
   if (style === "short") {

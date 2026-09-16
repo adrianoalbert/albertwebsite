@@ -61,6 +61,8 @@ export default async function CoursePage({
     return <div>{t.notFound}</div>
   }
 
+  const courseDate = formatCourseDate(course.date, locale, 'long')
+
   return (
     <div className={styles.container}>
       <div className={styles.overlay} aria-hidden="true"></div>
@@ -79,9 +81,11 @@ export default async function CoursePage({
             {course.title}
           </h1>
 
-          <p style={{ color: 'var(--text-muted)', marginBottom: 24, fontSize: '1.05rem' }}>
-            {formatCourseDate(course.date, locale, 'long')}
-          </p>
+          {courseDate && (
+            <p style={{ color: 'var(--text-muted)', marginBottom: 24, fontSize: '1.05rem' }}>
+              {courseDate}
+            </p>
+          )}
 
           {course.tags && course.tags.length > 0 && (
             <div className={styles.tags} style={{ justifyContent: 'flex-start', marginBottom: 20 }}>
