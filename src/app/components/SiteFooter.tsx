@@ -7,6 +7,7 @@ const NAV = [
   { href: '/publications', label: 'Publications' },
   { href: '/certifications', label: 'Certifications' },
   { href: '/courses', label: 'Courses' },
+  { href: '/product', label: 'Products' },
 ]
 
 export default function SiteFooter() {

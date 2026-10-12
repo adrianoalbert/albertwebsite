@@ -43,6 +43,7 @@ export default function Home() {
           <Link href="/publications">Publications</Link>
           <Link href="/certifications">Certifications</Link>
           <Link href="/courses">Courses</Link>
+          <Link href="/product">Products</Link>
         </nav>
 
         <div className="social-icons">
