@@ -25,6 +25,7 @@ export const productDateLocales: Record<ProductLocale, string> = {
 export type ProductCopy = {
   pageTitle: string;
   description: string;
+  introTitle: string;
   intro: string;
   screenshotAlt: string;
   trialTitle: string;
@@ -52,9 +53,10 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   en: {
     pageTitle: "Products",
     description:
-      "Configure and inspect Cisco switches and routers from Windows. Download the 7-day trial of NetPort Pro.",
+      "A practical networking tool for IT professionals. Download the 7-day trial of NetPort Pro.",
+    introTitle: "A Practical Networking Tool for IT Professionals",
     intro:
-      "Configure and inspect Cisco switches and routers from Windows. Connect over SSH, Telnet, or a console cable.",
+      "NetPort Pro was designed for network engineers and system administrators to configure and inspect Cisco switches and routers from Windows. Connect over SSH, Telnet, or a console cable.",
     screenshotAlt: "NetPort Pro window",
     trialTitle: "7-day trial",
     trialBody:
@@ -81,9 +83,10 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   ja: {
     pageTitle: "製品",
     description:
-      "Windows から Cisco のスイッチとルーターを設定し、確認します。NetPort Pro の7日間トライアルをダウンロードできます。",
+      "ITプロフェッショナルのための実用的なネットワークツールです。NetPort Pro の7日間トライアルをダウンロードできます。",
+    introTitle: "ITプロフェッショナルのための実用的なネットワークツール",
     intro:
-      "Windows から Cisco のスイッチとルーターを設定し、確認します。SSH、Telnet、またはコンソールケーブルで接続します。",
+      "NetPort Pro は、ネットワークエンジニアとシステム管理者が Windows から Cisco のスイッチとルーターを設定し、確認できるように設計されました。SSH、Telnet、またはコンソールケーブルで接続します。",
     screenshotAlt: "NetPort Pro の画面",
     trialTitle: "7日間トライアル",
     trialBody:
@@ -110,9 +113,10 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   pt: {
     pageTitle: "Produtos",
     description:
-      "Configure e inspecione switches e roteadores Cisco no Windows. Baixe a avaliação de 7 dias do NetPort Pro.",
+      "Uma ferramenta prática de rede para profissionais de TI. Baixe a avaliação de 7 dias do NetPort Pro.",
+    introTitle: "Uma ferramenta prática de rede para profissionais de TI",
     intro:
-      "Configure e inspecione switches e roteadores Cisco no Windows. Conecte por SSH, Telnet ou cabo de console.",
+      "O NetPort Pro foi projetado para que engenheiros de rede e administradores de sistemas configurem e inspecionem switches e roteadores Cisco no Windows. Conecte por SSH, Telnet ou cabo de console.",
     screenshotAlt: "Janela do NetPort Pro",
     trialTitle: "Avaliação de 7 dias",
     trialBody:

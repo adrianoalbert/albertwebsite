@@ -53,6 +53,7 @@ export default async function ProductPage({
         <div className={styles.bioSection}>
           <div className={`${styles.textContent} ${product.panel}`}>
             <h1>NetPort Pro</h1>
+            <p className={product.lead}>{copy.introTitle}</p>
             <p>{copy.intro}</p>
             <img
               className={product.shot}
