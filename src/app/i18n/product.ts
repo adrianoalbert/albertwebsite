@@ -26,6 +26,7 @@ export type ProductCopy = {
   pageTitle: string;
   description: string;
   intro: string;
+  screenshotAlt: string;
   trialTitle: string;
   trialBody: string;
   credentialsBody: string;
@@ -54,6 +55,7 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
       "Configure and inspect Cisco switches and routers from Windows. Download the 7-day trial of NetPort Pro.",
     intro:
       "Configure and inspect Cisco switches and routers from Windows. Connect over SSH, Telnet, or a console cable.",
+    screenshotAlt: "NetPort Pro window",
     trialTitle: "7-day trial",
     trialBody:
       "The trial lasts seven days from the first time you launch it on a computer. Once the trial ends, the program displays “The 7-day trial has ended.” and can no longer be opened.",
@@ -82,6 +84,7 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
       "Windows から Cisco のスイッチとルーターを設定し、確認します。NetPort Pro の7日間トライアルをダウンロードできます。",
     intro:
       "Windows から Cisco のスイッチとルーターを設定し、確認します。SSH、Telnet、またはコンソールケーブルで接続します。",
+    screenshotAlt: "NetPort Pro の画面",
     trialTitle: "7日間トライアル",
     trialBody:
       "トライアルは、そのコンピュータで初めて起動した日から7日間です。期間が終わると、プログラムは「The 7-day trial has ended.」と表示し、開くことができなくなります。",
@@ -110,6 +113,7 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
       "Configure e inspecione switches e roteadores Cisco no Windows. Baixe a avaliação de 7 dias do NetPort Pro.",
     intro:
       "Configure e inspecione switches e roteadores Cisco no Windows. Conecte por SSH, Telnet ou cabo de console.",
+    screenshotAlt: "Janela do NetPort Pro",
     trialTitle: "Avaliação de 7 dias",
     trialBody:
       "A avaliação dura sete dias a partir da primeira vez em que você a abre em um computador. Quando a avaliação termina, o programa exibe “The 7-day trial has ended.” e não pode mais ser aberto.",

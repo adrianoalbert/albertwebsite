@@ -25,6 +25,15 @@
   margin: 0 0 14px;
 }
 
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 6px 0 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;

@@ -54,6 +54,11 @@ export default async function ProductPage({
           <div className={`${styles.textContent} ${product.panel}`}>
             <h1>NetPort Pro</h1>
             <p>{copy.intro}</p>
+            <img
+              className={product.shot}
+              src="/images/product/netport-pro.png"
+              alt={copy.screenshotAlt}
+            />
             <h2>{copy.trialTitle}</h2>
             <p>{copy.trialBody}</p>
             <p>{copy.credentialsBody}</p>
