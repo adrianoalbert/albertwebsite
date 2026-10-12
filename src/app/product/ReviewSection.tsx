@@ -3,12 +3,29 @@
 import { useState } from "react";
 import type { Review } from "../lib/review-types";
 import product from "../styles/Product.module.css";
+import {
+  productCopy,
+  productDateLocales,
+  type ProductCopy,
+  type ProductLocale,
+} from "../i18n/product";
 
 type Props = {
   initialReviews: Review[];
+  copy: ProductCopy;
+  locale: ProductLocale;
 };
 
-export default function ReviewSection({ initialReviews }: Props) {
+function localError(message: string, copy: ProductCopy) {
+  const english = productCopy.en;
+  if (message === english.nameError) return copy.nameError;
+  if (message === english.ratingError) return copy.ratingError;
+  if (message === english.shortError) return copy.shortError;
+  if (message === english.readError) return copy.readError;
+  return copy.saveError;
+}
+
+export default function ReviewSection({ initialReviews, copy, locale }: Props) {
   const [reviews, setReviews] = useState(initialReviews);
   const [name, setName] = useState("");
   const [rating, setRating] = useState(0);
@@ -32,8 +49,8 @@ export default function ReviewSection({ initialReviews }: Props) {
         const message =
           payload && typeof payload === "object" && "error" in payload && typeof payload.error === "string"
             ? payload.error
-            : "The review could not be saved.";
-        setError(message);
+            : copy.saveError;
+        setError(localError(message, copy));
         return;
       }
       if (payload && typeof payload === "object" && "id" in payload) {
@@ -43,7 +60,7 @@ export default function ReviewSection({ initialReviews }: Props) {
       setRating(0);
       setComment("");
     } catch {
-      setError("The review could not be saved.");
+      setError(copy.saveError);
     } finally {
       setSending(false);
     }
@@ -51,14 +68,14 @@ export default function ReviewSection({ initialReviews }: Props) {
 
   return (
     <section className={product.reviews}>
-      <h2>Reviews</h2>
+      <h2>{copy.reviewsTitle}</h2>
       <form onSubmit={onSubmit}>
         <label className={product.field}>
-          Name
+          {copy.name}
           <input value={name} onChange={(event) => setName(event.target.value)} maxLength={80} required />
         </label>
         <div className={product.field}>
-          <span id="rating-label">Rating</span>
+          <span id="rating-label">{copy.rating}</span>
           <div className={product.stars} role="radiogroup" aria-labelledby="rating-label">
             {[1, 2, 3, 4, 5].map((value) => (
               <button
@@ -66,7 +83,7 @@ export default function ReviewSection({ initialReviews }: Props) {
                 type="button"
                 role="radio"
                 aria-checked={rating === value}
-                aria-label={`${value} of 5`}
+                aria-label={copy.starLabel.replace("{n}", String(value))}
                 className={value <= rating ? product.starOn : product.star}
                 onClick={() => setRating(value)}
               >
@@ -76,7 +93,7 @@ export default function ReviewSection({ initialReviews }: Props) {
           </div>
         </div>
         <label className={product.field}>
-          Review
+          {copy.review}
           <textarea
             value={comment}
             onChange={(event) => setComment(event.target.value)}
@@ -96,23 +113,23 @@ export default function ReviewSection({ initialReviews }: Props) {
         </label>
         {error ? <p className={product.error}>{error}</p> : null}
         <button className={product.button} type="submit" disabled={sending}>
-          {sending ? "Sending…" : "Publish review"}
+          {sending ? copy.sending : copy.publish}
         </button>
       </form>
 
       {reviews.length === 0 ? (
-        <p className={product.note}>No reviews yet.</p>
+        <p className={product.note}>{copy.empty}</p>
       ) : (
         <ul className={product.list}>
           {reviews.map((review) => (
             <li key={review.id}>
               <div className={product.reviewHead}>
                 <strong>{review.name}</strong>
-                <span aria-label={`${review.rating} of 5`}>{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span>
+                <span aria-label={copy.starLabel.replace("{n}", String(review.rating))}>{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span>
               </div>
               <p>{review.comment}</p>
               <time dateTime={review.createdAt}>
-                {new Date(review.createdAt).toLocaleDateString(undefined, {
+                {new Date(review.createdAt).toLocaleDateString(productDateLocales[locale], {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
