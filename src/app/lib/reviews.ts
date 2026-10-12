@@ -21,9 +21,11 @@ function database() {
   return neon(url);
 }
 
+type Sql = NonNullable<ReturnType<typeof database>>;
+
 let tableReady: Promise<void> | null = null;
 
-function ensureTable(sql: ReturnType<typeof neon>) {
+function ensureTable(sql: Sql) {
   if (!tableReady) {
     tableReady = sql`CREATE TABLE IF NOT EXISTS reviews (
       id TEXT PRIMARY KEY,
