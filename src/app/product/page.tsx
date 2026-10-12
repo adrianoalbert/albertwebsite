@@ -56,7 +56,7 @@ export default async function ProductPage({
             <p>{copy.intro}</p>
             <img
               className={product.shot}
-              src="/images/product/netport-pro.png"
+              src="/images/product/netport-pro.png?v=2"
               alt={copy.screenshotAlt}
             />
             <h2>{copy.trialTitle}</h2>
