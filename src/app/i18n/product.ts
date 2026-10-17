@@ -53,14 +53,14 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   en: {
     pageTitle: "Products",
     description:
-      "A practical networking tool for IT professionals. Download the 7-day trial of NetPort Pro.",
+      "A practical networking tool for IT professionals. Download the 14-day trial of NetPort Pro.",
     introTitle: "A Practical Networking Tool for IT Professionals",
     intro:
       "NetPort Pro was designed for network engineers and system administrators to configure and inspect Cisco switches and routers from Windows. Connect over SSH, Telnet, or a console cable.",
     screenshotAlt: "NetPort Pro window",
-    trialTitle: "7-day trial",
+    trialTitle: "14-day trial",
     trialBody:
-      "The trial lasts seven days from the first time you launch it on a computer. Once the trial ends, the program displays “The 7-day trial has ended.” and can no longer be opened.",
+      "The trial lasts 14 days from the first time you launch it on a computer. Once the trial ends, the program displays “The 14-day trial has ended.” and can no longer be opened.",
     credentialsBody:
       "The trial reads credentials.ini from the folder containing the exe file. The file is blank when downloaded. Enter your enable password and console username and password in it as needed. Enter your SSH or Telnet username and password directly in the program window.",
     downloadTrial: "Download the trial",
@@ -83,14 +83,14 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   ja: {
     pageTitle: "製品",
     description:
-      "ITプロフェッショナルのための実用的なネットワークツールです。NetPort Pro の7日間トライアルをダウンロードできます。",
+      "ITプロフェッショナルのための実用的なネットワークツールです。NetPort Pro の14日間トライアルをダウンロードできます。",
     introTitle: "ITプロフェッショナルのための実用的なネットワークツール",
     intro:
       "NetPort Pro は、ネットワークエンジニアとシステム管理者が Windows から Cisco のスイッチとルーターを設定し、確認できるように設計されました。SSH、Telnet、またはコンソールケーブルで接続します。",
     screenshotAlt: "NetPort Pro の画面",
-    trialTitle: "7日間トライアル",
+    trialTitle: "14日間トライアル",
     trialBody:
-      "トライアルは、そのコンピュータで初めて起動した日から7日間です。期間が終わると、プログラムは「The 7-day trial has ended.」と表示し、開くことができなくなります。",
+      "トライアルは、そのコンピュータで初めて起動した日から14日間です。期間が終わると、プログラムは「The 14-day trial has ended.」と表示し、開くことができなくなります。",
     credentialsBody:
       "トライアルは、exe ファイルがあるフォルダの credentials.ini を読み込みます。ダウンロードしたファイルは空です。enable パスワードと、コンソールのユーザー名およびパスワードを、必要に応じてそのファイルに入力してください。SSH または Telnet のユーザー名とパスワードは、プログラムの画面に直接入力します。",
     downloadTrial: "トライアルをダウンロード",
@@ -113,14 +113,14 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   pt: {
     pageTitle: "Produtos",
     description:
-      "Uma ferramenta prática de rede para profissionais de TI. Baixe a avaliação de 7 dias do NetPort Pro.",
+      "Uma ferramenta prática de rede para profissionais de TI. Baixe a avaliação de 14 dias do NetPort Pro.",
     introTitle: "Uma ferramenta prática de rede para profissionais de TI",
     intro:
       "O NetPort Pro foi projetado para que engenheiros de rede e administradores de sistemas configurem e inspecionem switches e roteadores Cisco no Windows. Conecte por SSH, Telnet ou cabo de console.",
     screenshotAlt: "Janela do NetPort Pro",
-    trialTitle: "Avaliação de 7 dias",
+    trialTitle: "Avaliação de 14 dias",
     trialBody:
-      "A avaliação dura sete dias a partir da primeira vez em que você a abre em um computador. Quando a avaliação termina, o programa exibe “The 7-day trial has ended.” e não pode mais ser aberto.",
+      "A avaliação dura 14 dias a partir da primeira vez em que você a abre em um computador. Quando a avaliação termina, o programa exibe “The 14-day trial has ended.” e não pode mais ser aberto.",
     credentialsBody:
       "A avaliação lê o credentials.ini na pasta do arquivo exe. O arquivo vem em branco. Informe nele a senha de enable e o usuário e a senha do console, conforme necessário. Informe o usuário e a senha de SSH ou Telnet diretamente na janela do programa.",
     downloadTrial: "Baixar a avaliação",
