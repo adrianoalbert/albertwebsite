@@ -83,7 +83,7 @@ export default async function ProductPage({
             <p>{copy.trialBody}</p>
             <p>{copy.credentialsBody}</p>
             <div className={product.actions}>
-              <a className={product.button} href="/downloads/NetPortProTrial.exe?v=20261017" download>
+              <a className={product.button} href="/downloads/NetPortProTrial.exe?v=20261022" download>
                 {copy.downloadTrial}
               </a>
               <a className={product.buttonSecondary} href="/downloads/credentials.ini" download>
