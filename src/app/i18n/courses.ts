@@ -28,6 +28,7 @@ export const defaultCourseArea: CourseArea = "all";
 
 /** Primary area per course slug. */
 export const coursePrimaryArea: Record<string, Exclude<CourseArea, "all">> = {
+  "csa-certified-soc-analyst": "security",
   "cpent-certified-penetration-testing": "security",
   "cnd-certified-network-defender": "security",
   "ceh-certified-ethical-hacker": "security",
@@ -114,6 +115,13 @@ export const courseCardMeta: Record<
   string,
   { summary: Record<CourseLocale, string>; tags: [string, string] }
 > = {
+  "csa-certified-soc-analyst": {
+    summary: {
+      en: "SOC operations, SIEM, and incident detection for blue-team analysts.",
+      ja: "SOC運用、SIEM、インシデント検知を学ぶブルーチーム向け研修。",
+    },
+    tags: ["EC-Council", "SOC"],
+  },
   "cpent-certified-penetration-testing": {
     summary: {
       en: "Advanced penetration testing for real-world red-team engagements.",

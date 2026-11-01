@@ -39,9 +39,11 @@ export default async function CoursesPage({
   const sortedCourses = courses
     .filter((course) => courseMatchesArea(course.slug, area))
     .sort((a, b) => {
-      const dateA = new Date(a.date)
-      const dateB = new Date(b.date)
-      return dateB.getTime() - dateA.getTime()
+      const timeA = Date.parse(a.date)
+      const timeB = Date.parse(b.date)
+      const safeA = Number.isFinite(timeA) ? timeA : 0
+      const safeB = Number.isFinite(timeB) ? timeB : 0
+      return safeB - safeA
     })
 
   return (
