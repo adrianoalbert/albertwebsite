@@ -4,13 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { showProduct } from '../siteFlags'
 
 const NAV = [
   { href: '/about', label: 'About' },
   { href: '/publications', label: 'Publications' },
   { href: '/certifications', label: 'Certifications' },
   { href: '/courses', label: 'Courses' },
-  { href: '/product', label: 'Products' },
+  ...(showProduct ? [{ href: '/product', label: 'Products' }] : []),
 ]
 
 export default function SiteHeader() {

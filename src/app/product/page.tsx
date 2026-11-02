@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import styles from "../styles/About.module.css";
 import cardStyles from "../styles/Card.module.css";
 import product from "../styles/Product.module.css";
 import { listReviews } from "../lib/reviews";
 import { parseProductLocale, productCopy } from "../i18n/product";
+import { showProduct } from "../siteFlags";
 import ReviewSection from "./ReviewSection";
 import ProductLanguageSwitcher from "./LanguageSwitcher";
 
@@ -20,6 +22,9 @@ export async function generateMetadata({
 }: {
   searchParams?: SearchParams | Promise<SearchParams>;
 }): Promise<Metadata> {
+  if (!showProduct) {
+    return { title: "Not found" };
+  }
   const locale = await readLocale(searchParams);
   const copy = productCopy[locale];
   return {
@@ -35,6 +40,10 @@ export default async function ProductPage({
 }: {
   searchParams?: SearchParams | Promise<SearchParams>;
 }) {
+  if (!showProduct) {
+    notFound();
+  }
+
   const locale = await readLocale(searchParams);
   const copy = productCopy[locale];
   const reviews = await listReviews();

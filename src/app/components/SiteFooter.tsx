@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiX } from 'react-icons/si'
+import { showProduct } from '../siteFlags'
 
 const NAV = [
   { href: '/about', label: 'About' },
   { href: '/publications', label: 'Publications' },
   { href: '/certifications', label: 'Certifications' },
   { href: '/courses', label: 'Courses' },
-  { href: '/product', label: 'Products' },
+  ...(showProduct ? [{ href: '/product', label: 'Products' }] : []),
 ]
 
 export default function SiteFooter() {

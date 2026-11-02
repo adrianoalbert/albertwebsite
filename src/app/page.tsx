@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiX } from "react-icons/si";
+import { showProduct } from "./siteFlags";
 
 export const metadata: Metadata = {
   title: {
@@ -43,7 +44,7 @@ export default function Home() {
           <Link href="/publications">Publications</Link>
           <Link href="/certifications">Certifications</Link>
           <Link href="/courses">Courses</Link>
-          <Link href="/product">Products</Link>
+          {showProduct && <Link href="/product">Products</Link>}
         </nav>
 
         <div className="social-icons">
