@@ -12,7 +12,7 @@ certificate: 'https://aspen.eccouncil.org/VerifyBadge?type=training&a=WBt/QO5jre
 - **期間**: 3日間
 - **開始日**: 2026年10月5日
 - **終了日**: 2026年10月7日
-- **レベル**: 初級〜中級
+- **レベル**: 中級
 - **コースコード**: CSA v2
 
 ## コース概要

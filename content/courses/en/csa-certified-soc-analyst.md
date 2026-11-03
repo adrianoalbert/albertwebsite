@@ -7,7 +7,7 @@ tags: [EC-Council, CSA, SOC, SIEM, Incident Response]
 - **Duration**: 3 days
 - **Start Date**: October 5, 2026
 - **End Date**: October 7, 2026
-- **Level**: Beginner to Intermediate
+- **Level**: Intermediate
 - **Course Code**: CSA v2
 
 ## Course Overview
