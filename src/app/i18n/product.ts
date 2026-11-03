@@ -34,6 +34,9 @@ export type ProductCopy = {
   downloadTrial: string;
   downloadCredentials: string;
   windowsNote: string;
+  privacyTitle: string;
+  privacyBody: string;
+  privacyLink: string;
   reviewsTitle: string;
   name: string;
   rating: string;
@@ -66,6 +69,10 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
     downloadTrial: "Download the trial",
     downloadCredentials: "Download credentials.ini",
     windowsNote: "Windows 10 or 11, 64-bit.",
+    privacyTitle: "Privacy",
+    privacyBody:
+      "Read how NetPort Pro handles credentials, device details, and other information.",
+    privacyLink: "Privacy policy",
     reviewsTitle: "Reviews",
     name: "Name",
     rating: "Rating",
@@ -96,6 +103,10 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
     downloadTrial: "トライアルをダウンロード",
     downloadCredentials: "credentials.ini をダウンロード",
     windowsNote: "Windows 10 または 11、64ビット。",
+    privacyTitle: "プライバシー",
+    privacyBody:
+      "NetPort Pro が認証情報、機器の情報、その他のデータをどのように扱うかをご覧ください。",
+    privacyLink: "プライバシーポリシー",
     reviewsTitle: "レビュー",
     name: "名前",
     rating: "評価",
@@ -126,6 +137,10 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
     downloadTrial: "Baixar a avaliação",
     downloadCredentials: "Baixar credentials.ini",
     windowsNote: "Windows 10 ou 11, 64 bits.",
+    privacyTitle: "Privacidade",
+    privacyBody:
+      "Leia como o NetPort Pro trata credenciais, dados de dispositivos e outras informações.",
+    privacyLink: "Política de privacidade",
     reviewsTitle: "Avaliações",
     name: "Nome",
     rating: "Nota",

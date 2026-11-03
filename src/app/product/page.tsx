@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import styles from "../styles/About.module.css";
@@ -83,6 +84,13 @@ export default async function ProductPage({
             <h1>NetPort Pro</h1>
             <p className={product.lead}>{copy.introTitle}</p>
             <p>{copy.intro}</p>
+            <h2>{copy.privacyTitle}</h2>
+            <p>{copy.privacyBody}</p>
+            <div className={product.actions}>
+              <Link className={product.buttonSecondary} href="/privacy">
+                {copy.privacyLink}
+              </Link>
+            </div>
             <img
               className={product.shot}
               src="/images/product/netport-pro.png?v=2"
