@@ -28,16 +28,13 @@ export type ProductCopy = {
   introTitle: string;
   intro: string;
   screenshotAlt: string;
-  trialTitle: string;
-  trialBody: string;
-  credentialsBody: string;
-  downloadTrial: string;
-  downloadCredentials: string;
+  storeLink: string;
   windowsNote: string;
   privacyTitle: string;
   privacyBody: string;
   privacyLink: string;
   reviewsTitle: string;
+  writeTitle: string;
   name: string;
   rating: string;
   starLabel: string;
@@ -56,24 +53,19 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   en: {
     pageTitle: "Products",
     description:
-      "A practical networking tool for IT professionals. Download the 30-day trial of NetPort Pro.",
+      "A practical networking tool for IT professionals. Get NetPort Pro from the Microsoft Store.",
     introTitle: "A Practical Networking Tool for IT Professionals",
     intro:
       "NetPort Pro was designed for network engineers and system administrators to configure and inspect Cisco switches and routers from Windows. Connect over SSH, Telnet, or a console cable.",
     screenshotAlt: "NetPort Pro window",
-    trialTitle: "30-day trial",
-    trialBody:
-      "The trial lasts 30 days from the first time you launch it on a computer. Once the trial ends, the program displays “The 30-day trial has ended.” and can no longer be opened.",
-    credentialsBody:
-      "The trial reads credentials.ini from the folder containing the exe file. The file is blank when downloaded. Enter your enable password and console username and password in it as needed. Enter your SSH or Telnet username and password directly in the program window.",
-    downloadTrial: "Download the trial",
-    downloadCredentials: "Download credentials.ini",
+    storeLink: "Get it from Microsoft Store",
     windowsNote: "Windows 10 or 11, 64-bit.",
     privacyTitle: "Privacy",
     privacyBody:
       "Read how NetPort Pro handles credentials, device details, and other information.",
     privacyLink: "Privacy policy",
     reviewsTitle: "Reviews",
+    writeTitle: "Write a review",
     name: "Name",
     rating: "Rating",
     starLabel: "{n} of 5",
@@ -90,24 +82,19 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   ja: {
     pageTitle: "製品",
     description:
-      "ITプロフェッショナルのための実用的なネットワークツールです。NetPort Pro の30日間トライアルをダウンロードできます。",
+      "ITプロフェッショナルのための実用的なネットワークツールです。NetPort Pro は Microsoft Store から入手できます。",
     introTitle: "ITプロフェッショナルのための実用的なネットワークツール",
     intro:
       "NetPort Pro は、ネットワークエンジニアとシステム管理者が Windows から Cisco のスイッチとルーターを設定し、確認できるように設計されました。SSH、Telnet、またはコンソールケーブルで接続します。",
     screenshotAlt: "NetPort Pro の画面",
-    trialTitle: "30日間トライアル",
-    trialBody:
-      "トライアルは、そのコンピュータで初めて起動した日から30日間です。期間が終わると、プログラムは「The 30-day trial has ended.」と表示し、開くことができなくなります。",
-    credentialsBody:
-      "トライアルは、exe ファイルがあるフォルダの credentials.ini を読み込みます。ダウンロードしたファイルは空です。enable パスワードと、コンソールのユーザー名およびパスワードを、必要に応じてそのファイルに入力してください。SSH または Telnet のユーザー名とパスワードは、プログラムの画面に直接入力します。",
-    downloadTrial: "トライアルをダウンロード",
-    downloadCredentials: "credentials.ini をダウンロード",
+    storeLink: "Microsoft Store で入手",
     windowsNote: "Windows 10 または 11、64ビット。",
     privacyTitle: "プライバシー",
     privacyBody:
       "NetPort Pro が認証情報、機器の情報、その他のデータをどのように扱うかをご覧ください。",
     privacyLink: "プライバシーポリシー",
     reviewsTitle: "レビュー",
+    writeTitle: "レビューを書く",
     name: "名前",
     rating: "評価",
     starLabel: "5段階中{n}",
@@ -124,24 +111,19 @@ export const productCopy: Record<ProductLocale, ProductCopy> = {
   pt: {
     pageTitle: "Produtos",
     description:
-      "Uma ferramenta prática de rede para profissionais de TI. Baixe a avaliação de 30 dias do NetPort Pro.",
+      "Uma ferramenta prática de rede para profissionais de TI. Obtenha o NetPort Pro na Microsoft Store.",
     introTitle: "Uma ferramenta prática de rede para profissionais de TI",
     intro:
       "O NetPort Pro foi projetado para que engenheiros de rede e administradores de sistemas configurem e inspecionem switches e roteadores Cisco no Windows. Conecte por SSH, Telnet ou cabo de console.",
     screenshotAlt: "Janela do NetPort Pro",
-    trialTitle: "Avaliação de 30 dias",
-    trialBody:
-      "A avaliação dura 30 dias a partir da primeira vez em que você a abre em um computador. Quando a avaliação termina, o programa exibe “The 30-day trial has ended.” e não pode mais ser aberto.",
-    credentialsBody:
-      "A avaliação lê o credentials.ini na pasta do arquivo exe. O arquivo vem em branco. Informe nele a senha de enable e o usuário e a senha do console, conforme necessário. Informe o usuário e a senha de SSH ou Telnet diretamente na janela do programa.",
-    downloadTrial: "Baixar a avaliação",
-    downloadCredentials: "Baixar credentials.ini",
+    storeLink: "Obter na Microsoft Store",
     windowsNote: "Windows 10 ou 11, 64 bits.",
     privacyTitle: "Privacidade",
     privacyBody:
       "Leia como o NetPort Pro trata credenciais, dados de dispositivos e outras informações.",
     privacyLink: "Política de privacidade",
     reviewsTitle: "Avaliações",
+    writeTitle: "Escrever uma avaliação",
     name: "Nome",
     rating: "Nota",
     starLabel: "{n} de 5",

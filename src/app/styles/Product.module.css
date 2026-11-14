@@ -5,6 +5,24 @@
   color: var(--text, #f2f5f7);
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 12px;
+}
+
+.title h1 {
+  margin: 0;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
 .panel h2 {
   margin: 28px 0 10px;
   font-family: var(--font-display), "Syne", sans-serif;
@@ -43,9 +61,13 @@
   display: block;
   width: 100%;
   height: auto;
+  max-height: min(420px, 55vh);
+  object-fit: contain;
+  object-position: top;
   margin: 6px 0 4px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .actions {
@@ -87,6 +109,15 @@
 .reviews {
   margin-top: 36px;
   padding-top: 8px;
+  scroll-margin-top: 88px;
+}
+
+.writeTitle {
+  margin: 28px 0 12px;
+  font-family: var(--font-display), "Syne", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text, #f2f5f7);
 }
 
 .field {
@@ -144,9 +175,9 @@
   font-weight: 600;
 }
 
-.list {
+.reviews .list {
   list-style: none;
-  margin: 28px 0 0;
+  margin: 8px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;

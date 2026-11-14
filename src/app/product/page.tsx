@@ -11,6 +11,8 @@ import { showProduct } from "../siteFlags";
 import ReviewSection from "./ReviewSection";
 import ProductLanguageSwitcher from "./LanguageSwitcher";
 
+const MICROSOFT_STORE_URL = "https://apps.microsoft.com/detail/9plhxzqj1h1l";
+
 type SearchParams = { lang?: string | string[] };
 
 async function readLocale(searchParams?: SearchParams | Promise<SearchParams>) {
@@ -81,33 +83,42 @@ export default async function ProductPage({
         </div>
         <div className={styles.bioSection}>
           <div className={`${styles.textContent} ${product.panel}`}>
-            <h1>NetPort Pro</h1>
+            <div className={product.title}>
+              <img
+                className={product.logo}
+                src="/images/product/netport-pro-logo.png"
+                alt=""
+                width={56}
+                height={56}
+              />
+              <h1>NetPort Pro</h1>
+            </div>
             <p className={product.lead}>{copy.introTitle}</p>
             <p>{copy.intro}</p>
-            <h2>{copy.privacyTitle}</h2>
-            <p>{copy.privacyBody}</p>
             <div className={product.actions}>
-              <Link className={product.buttonSecondary} href="/privacy">
+              <a
+                className={product.button}
+                href={MICROSOFT_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {copy.storeLink}
+              </a>
+              <Link
+                className={product.buttonSecondary}
+                href={
+                  locale === "en" ? "/privacy" : `/privacy?lang=${locale}`
+                }
+              >
                 {copy.privacyLink}
               </Link>
             </div>
+            <p className={product.note}>{copy.windowsNote}</p>
             <img
               className={product.shot}
-              src="/images/product/netport-pro.png?v=2"
+              src="/images/product/netport-pro.png?v=4"
               alt={copy.screenshotAlt}
             />
-            <h2>{copy.trialTitle}</h2>
-            <p>{copy.trialBody}</p>
-            <p>{copy.credentialsBody}</p>
-            <div className={product.actions}>
-              <a className={product.button} href="/downloads/NetPortProTrial.exe?v=20261022" download>
-                {copy.downloadTrial}
-              </a>
-              <a className={product.buttonSecondary} href="/downloads/credentials.ini" download>
-                {copy.downloadCredentials}
-              </a>
-            </div>
-            <p className={product.note}>{copy.windowsNote}</p>
             <ReviewSection initialReviews={reviews} copy={copy} locale={locale} />
           </div>
         </div>

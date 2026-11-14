@@ -69,6 +69,32 @@ export default function ReviewSection({ initialReviews, copy, locale }: Props) {
   return (
     <section className={product.reviews}>
       <h2>{copy.reviewsTitle}</h2>
+      {reviews.length === 0 ? (
+        <p className={product.note}>{copy.empty}</p>
+      ) : (
+        <ul className={product.list}>
+          {reviews.map((review) => (
+            <li key={review.id}>
+              <div className={product.reviewHead}>
+                <strong>{review.name}</strong>
+                <span aria-label={copy.starLabel.replace("{n}", String(review.rating))}>
+                  {"★".repeat(review.rating)}
+                  {"☆".repeat(5 - review.rating)}
+                </span>
+              </div>
+              <p>{review.comment}</p>
+              <time dateTime={review.createdAt}>
+                {new Date(review.createdAt).toLocaleDateString(productDateLocales[locale], {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </time>
+            </li>
+          ))}
+        </ul>
+      )}
+      <h3 className={product.writeTitle}>{copy.writeTitle}</h3>
       <form onSubmit={onSubmit}>
         <label className={product.field}>
           {copy.name}
@@ -116,29 +142,6 @@ export default function ReviewSection({ initialReviews, copy, locale }: Props) {
           {sending ? copy.sending : copy.publish}
         </button>
       </form>
-
-      {reviews.length === 0 ? (
-        <p className={product.note}>{copy.empty}</p>
-      ) : (
-        <ul className={product.list}>
-          {reviews.map((review) => (
-            <li key={review.id}>
-              <div className={product.reviewHead}>
-                <strong>{review.name}</strong>
-                <span aria-label={copy.starLabel.replace("{n}", String(review.rating))}>{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span>
-              </div>
-              <p>{review.comment}</p>
-              <time dateTime={review.createdAt}>
-                {new Date(review.createdAt).toLocaleDateString(productDateLocales[locale], {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </time>
-            </li>
-          ))}
-        </ul>
-      )}
     </section>
   );
 }
