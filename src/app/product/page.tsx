@@ -116,7 +116,7 @@ export default async function ProductPage({
             <p className={product.note}>{copy.windowsNote}</p>
             <img
               className={product.shot}
-              src="/images/product/netport-pro.png?v=4"
+              src="/images/product/netport-pro.png?v=5"
               alt={copy.screenshotAlt}
             />
             <ReviewSection initialReviews={reviews} copy={copy} locale={locale} />
